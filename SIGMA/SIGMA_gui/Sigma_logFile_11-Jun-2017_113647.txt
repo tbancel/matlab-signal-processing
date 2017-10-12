@@ -1,0 +1,58 @@
+
+ ==== Informations : Sigma Feature assembling    ====
+ The features matrix has the right dimension
+ The dimension of the feature matrix is : 32  40
+ The list of subject is : 1  2  3
+ The number of subject is : 3
+ The number of epochs of each subject is : 14  17   9
+ The total number of epochs is : 40
+ The list of the used method(s) is : 1  2
+ The total number of method(s) is : 2
+ The filters vector is  : 0  0
+ The filters are applied for the methods : 
+ The total number of appliyed filter is : 0
+ The selected band(s)\n :
+      All bands : [0.1 90] Hz
+ 
+ The total number of bands is : 2
+ The total number of channels is : 16
+ The total number of features is : 32
+ The used methods for features are: 
+  	      spect_fourier_power
+  	      amp_fractal_katz
+  	      
+ *** Start of OFR Ranking Algorithm ***
+ You have selected the gram_schmidt method for the ranking
+ The feature matrix has the dimension of : 32  40
+ You have selected  "All the feature matrix" for the ranaking ...
+ The feature 23 is ranked 1 and comes from method N°:2 (amp_fractal_katz); channel N°: 7 (F8); band N°: NaN(all bands or not applied filters...)
+ The feature 17 is ranked 2 and comes from method N°:2 (amp_fractal_katz); channel N°: 1 (Fp1); band N°: NaN(all bands or not applied filters...)
+ The feature 32 is ranked 3 and comes from method N°:2 (amp_fractal_katz); channel N°: 16 (O2); band N°: NaN(all bands or not applied filters...)
+ The feature 15 is ranked 4 and comes from method N°:  1  (spect_fourier_power); channel N°: 15(Oz); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 22 is ranked 5 and comes from method N°:2 (amp_fractal_katz); channel N°: 6 (F4); band N°: NaN(all bands or not applied filters...)
+ The feature 28 is ranked 6 and comes from method N°:2 (amp_fractal_katz); channel N°: 12 (Pz); band N°: NaN(all bands or not applied filters...)
+ The feature 30 is ranked 7 and comes from method N°:2 (amp_fractal_katz); channel N°: 14 (O1); band N°: NaN(all bands or not applied filters...)
+ The feature 7 is ranked 8 and comes from method N°:  1  (spect_fourier_power); channel N°: 7(F8); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 10 is ranked 9 and comes from method N°:  1  (spect_fourier_power); channel N°: 10(CP6); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 12 is ranked 10 and comes from method N°:  1  (spect_fourier_power); channel N°: 12(Pz); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 26 is ranked 11 and comes from method N°:2 (amp_fractal_katz); channel N°: 10 (CP6); band N°: NaN(all bands or not applied filters...)
+ The feature 11 is ranked 12 and comes from method N°:  1  (spect_fourier_power); channel N°: 11(P3); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 9 is ranked 13 and comes from method N°:  1  (spect_fourier_power); channel N°: 9(CP5); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 20 is ranked 14 and comes from method N°:2 (amp_fractal_katz); channel N°: 4 (F3); band N°: NaN(all bands or not applied filters...)
+ The feature 3 is ranked 15 and comes from method N°:  1  (spect_fourier_power); channel N°: 3(F7); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 27 is ranked 16 and comes from method N°:2 (amp_fractal_katz); channel N°: 11 (P3); band N°: NaN(all bands or not applied filters...)
+ The feature 8 is ranked 17 and comes from method N°:  1  (spect_fourier_power); channel N°: 8(Cz); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 5 is ranked 18 and comes from method N°:  1  (spect_fourier_power); channel N°: 5(Fz); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 29 is ranked 19 and comes from method N°:2 (amp_fractal_katz); channel N°: 13 (P4); band N°: NaN(all bands or not applied filters...)
+ The feature 25 is ranked 20 and comes from method N°:2 (amp_fractal_katz); channel N°: 9 (CP5); band N°: NaN(all bands or not applied filters...)
+ The feature 24 is ranked 21 and comes from method N°:2 (amp_fractal_katz); channel N°: 8 (Cz); band N°: NaN(all bands or not applied filters...)
+ The feature 1 is ranked 22 and comes from method N°:  1  (spect_fourier_power); channel N°: 1(Fp1); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 2 is ranked 23 and comes from method N°:  1  (spect_fourier_power); channel N°: 2(Fp2); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 4 is ranked 24 and comes from method N°:  1  (spect_fourier_power); channel N°: 4(F3); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 13 is ranked 25 and comes from method N°:  1  (spect_fourier_power); channel N°: 13(P4); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 16 is ranked 26 and comes from method N°:  1  (spect_fourier_power); channel N°: 16(O2); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ The feature 19 is ranked 27 and comes from method N°:2 (amp_fractal_katz); channel N°: 3 (F7); band N°: NaN(all bands or not applied filters...)
+ The feature 18 is ranked 28 and comes from method N°:2 (amp_fractal_katz); channel N°: 2 (Fp2); band N°: NaN(all bands or not applied filters...)
+ The feature 31 is ranked 29 and comes from method N°:2 (amp_fractal_katz); channel N°: 15 (Oz); band N°: NaN(all bands or not applied filters...)
+ The feature 6 is ranked 30 and comes from method N°:  1  (spect_fourier_power); channel N°: 6(F4); band N°: 0(all bands or not applied filters...); power type N°: 0, Type : all bands.
+ *** End of OFR Ranking Function ***

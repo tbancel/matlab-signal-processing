@@ -1,0 +1,2867 @@
+/*!
+ * jQuery UI CSS Framework 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+
+.ui-helper-hidden {
+  display: none;
+}
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+  clear: both;
+}
+.ui-helper-clearfix {
+  min-height: 0; /* support: IE7 */
+}
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter:Alpha(Opacity=0);
+}
+
+.ui-front {
+  z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+  cursor: default !important;
+}
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*!
+ * jQuery UI Resizable 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.ui-resizable {
+  position: relative;
+}
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+  display: none;
+}
+.ui-resizable-n {
+  cursor: n-resize;
+  height: 7px;
+  width: 100%;
+  top: -5px;
+  left: 0;
+}
+.ui-resizable-s {
+  cursor: s-resize;
+  height: 7px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+}
+.ui-resizable-e {
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0;
+  height: 100%;
+}
+.ui-resizable-w {
+  cursor: w-resize;
+  width: 7px;
+  left: -5px;
+  top: 0;
+  height: 100%;
+}
+.ui-resizable-se {
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px;
+}
+.ui-resizable-sw {
+  cursor: sw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  bottom: -5px;
+}
+.ui-resizable-nw {
+  cursor: nw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  top: -5px;
+}
+.ui-resizable-ne {
+  cursor: ne-resize;
+  width: 9px;
+  height: 9px;
+  right: -5px;
+  top: -5px;
+}
+/* Hide from everyone */
+
+html.js .hidden {
+  display: none !important;
+}
+
+/* Hide visually but display to screenreaders */
+html.js .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+
+/* Expand containers to surround floated elements: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+/* MATLAB Central and sitewide styles */
+
+.wrapper * {
+  -moz-box-sizing: content-box;
+}
+
+#header label {
+  display: inline;
+  float: left;
+  padding: 0 6px 0 0;
+  font-weight: normal;
+}
+
+#header input {
+  float: none;
+}
+
+#header input[type=text] {
+  border: 1px solid #a3a2a2;
+}
+
+#middle .wrapper {
+  background: #ffffff url(/matlabcentral/images/mlc-answer-banner.jpg) no-repeat 0 0;
+}
+
+
+.success,
+.error {
+  width: auto;
+  border-width: 1px !important;
+}
+
+.question-body pre.error,
+.answer-body pre.error,
+.comment-body pre.error,
+.matlabmarkup-preview-body pre.error {
+  min-height: 1em;
+  margin: 0;
+  margin-bottom: 10px;
+  border: 0;
+  padding: 0;
+  color: #cc0000;
+  background: none;
+}
+
+
+/* Left nav */
+
+#localnav .logincta {
+  padding: 9px 0 5px 0.8em;
+  color: #333333;
+}
+
+#localnav .logincta a {
+  display: inline;
+  padding: 0;
+}
+
+ul#localnav li.maincta {
+  margin-top: 1em;
+}
+
+#localnav #my_profile {
+  margin-top: 1em;
+  border-top: 1px solid #d4d4d4;
+}
+
+#localnav #my_profile a {
+  border-top: 1px solid #fff;
+}
+
+#localnav #my_comments {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+#localnav #my_comments a {
+  border-bottom: 1px solid #fff;
+}
+
+#localnav .about {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+.random_callout .panel {
+  display: none;
+}
+
+/* Facets */
+
+.filter-container,
+#colleft .container {
+  display: block;
+  width: 175px;
+  margin: 0 0 12px 10px;
+  border: 1px solid #d6d4d4;
+}
+
+.filter-container h3,
+#colleft .container h3 {
+  margin: 0;
+  border: 1px solid #fff;
+  padding: 6px 6px;
+  font-size: 1.0em;
+  line-height: 100%;
+  background: #eaeaea;
+}
+
+.filter-container .filter {
+  _height: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-top: 1px solid #d6d4d4;
+  padding: 0;
+  background: #f8f8f8;
+}
+
+.filter-container .filter ul,
+#colleft .container ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-container .filter ul li,
+#colleft .container ul li {
+  margin: 0;
+  padding: 0;
+  line-height: 130%;
+  background: none;
+}
+
+.filter-container .filter ul li a,
+#colleft .container ul li a {
+  display: block;
+  border: 0;
+  padding: 5px 7px 5px 7px;
+  background-image: none;
+  text-decoration: none;
+}
+
+.filter-container .filter ul li a:hover,
+.filter-container .filter ul li a.selected:hover {
+  background-color: #dbdbdb;
+}
+
+.search_refine .search_refine_scroll ul li a.selected {
+  color: #000000;
+  font-weight: bold;
+}
+
+.search_refine .search_refine_scroll ul li a.selected span {
+  width: 19px;
+  text-indent: -5000px;
+  background: transparent url(/matlabcentral/answers/assets/close-button-large.png) no-repeat right 0;
+}
+
+.filter-container .filter ul li a.remove-filter,
+.filter-container .filter ul li a span {
+  display: block;
+  float: right;
+  padding: 0;
+}
+
+/* Related questions (left nav) */
+
+#colleft .container ul {
+  border-top: 1px solid #d6d4d4;
+}
+
+#colleft .container ul li a {
+  padding-right: 18px;
+  background: url(/matlabcentral/answers/assets/source-mathworks.png) no-repeat 160px 5px;
+}
+
+
+/* Search form */
+
+.search {
+  margin: 0 0 20px 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 10px 15px 15px 15px;
+  background-color: #e6e6e6;
+  background-image: linear-gradient(left top, #e6e6e6 35%, #f7f7f7 100%);
+  background-image: -o-linear-gradient(left top, #e6e6e6 35%, #f7f7f7 100%);
+  background-image: -moz-linear-gradient(left top, #e6e6e6 35%, #f7f7f7 100%);
+  background-image: -ms-linear-gradient(left top, #e6e6e6 35%, #f7f7f7 100%);
+  background-image: -webkit-linear-gradient(left top, #e6e6e6 35%, #f7f7f7 100%);
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.35, #e6e6e6), color-stop(1, #f7f7f7));
+}
+
+.search h2 {
+  margin: 0;
+  padding: 0 0 2px 0;
+  font-size: 1.1em;
+  color: #bf8c02;
+}
+
+.search-field {
+  width: 600px;
+  float: left;
+  border: 1px solid #c3c3c3;
+  padding: 2px;
+  background-color: #fff;
+  line-height: 1.8;
+}
+
+.search-field input[type=text] {
+  display: block;
+  border: none;
+  outline: none;
+  padding: 2px 0;
+  font-size: 9pt;
+  line-height: 1.6;
+}
+
+.search-contributors input[type=text] {
+  width: 100%;
+}
+
+.search-submit input {
+  display: inline-block;
+  height: 19px;
+  width: 18px;
+  margin: 4px 0 0 5px;
+  border: 0;
+  padding: 0;
+  background: transparent url(/matlabcentral/images/gobutton.gif) no-repeat 0 1px;
+  text-indent: -9999px;
+  vertical-align: baseline;
+}
+
+.search-submit input:hover {
+  background-image: url(/matlabcentral/images/gobutton_hover.gif);
+}
+
+.tokenized .tokens {
+  /*float: left;*/
+}
+
+.tokenized .token {
+  display: block;
+  float: left;
+  margin: 0 5px 0 0;
+  border: 1px solid #d6d4d4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 1px 0 1px 5px;
+  white-space: nowrap;
+  background-color: #f8f8f8;
+}
+
+.tokenized .token .label {
+  padding: 0 5px 0 0;
+}
+
+.tokenized span.token.selected {
+  background-color: #eaeaea;
+}
+
+.tokenized span.token.highlighted {
+  background-color: #d9d9d9;
+}
+
+.tokenized .token .remove a {
+  display: inline-block;
+  float: none;
+  width: 16px;
+  height: auto;
+  padding: 0;
+  background: transparent url(/matlabcentral/answers/assets/close-button.png) no-repeat center center;
+  text-indent: -5000px;
+}
+
+/* Expand search */
+
+.expand-search {
+  width: 600px;
+  clear: left;
+  padding: 2px 0 0;
+  text-align: right;
+}
+
+
+
+/* Major sections */
+
+#mainbody {
+  width: 740px;
+}
+
+#contactus {
+  clear: both;
+  margin-top: 20px;
+}
+
+
+.hover {
+  position: relative;
+  float: left;
+  padding: 0 0 0 10px;
+}
+
+.hover > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 300px;
+  border: 1px solid #d4d4d4;
+  padding: 5px 15px;
+  background-color: #f7f7f7;
+}
+
+.hover ul {
+  margin: 0;
+}
+
+
+/* Forms */
+
+
+label.required:before,
+p.required:before {
+  content: "*";
+  display: inline-block;
+  width: 12px;
+  font-size: 10px;
+  vertical-align: 10%;
+  color: #990000;
+}
+
+label .maxlength {
+  display: inline-block;
+  float: right;
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+div.radio,
+div.check {
+  position: relative;
+  padding: 0 0 10px 0;
+}
+
+div.radio > label,
+div.check > label {
+  display: inline-block;
+}
+
+div.radio > input[type=radio] {
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+
+div.check > input[type=checkbox] {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+div.radio > label,
+div.radio > p,
+div.radio > ul,
+div.check > label,
+div.check > p,
+div.check > ul {
+  margin: 0 0 0 20px;
+  line-height: 1.4;
+}
+
+div.radio > label,
+div.check > label {
+  padding: 0 0 0.25em 0;
+}
+
+div.check > p {
+  margin-bottom: 0.25em;
+}
+
+form .submit {
+  padding: 5px 0 0 0;
+}
+
+.closure-form textarea,
+.flagging-form textarea,
+.unaccept-form textarea {
+  height: 100px;
+}
+
+.closure-form .radio,
+.closure-form .message,
+.flagging-form .radio,
+.flagging-form .message,
+.unaccept-form .radio,
+.unaccept-form .message {
+  clear: left;
+}
+
+.closure-form .radio label,
+.flagging-form .radio label,
+.unaccept-form .radio label {
+  display: block;
+  float: left;
+}
+
+.reopen-form {
+  min-height: 25px !important;
+}
+
+.contact-form {
+  border: 1px solid #d4d4d4;
+  padding: 5px 15px;
+  background-color: #f7f7f7;
+  font-size: 9pt;
+}
+
+.contact-form .label {
+  display: block;
+  padding: 10px 0 0;
+  font-weight: bold;
+}
+
+.contact-form textarea {
+  width: 500px;
+  height: 200px;
+}
+
+.watch-form {
+  padding: 25px 0 0;
+}
+
+.watch-form label {
+  font-weight: normal;
+}
+
+.question-list .question,
+.contributor-list .contributor,
+.activity-list .activity,
+.flagging-list .flagging {
+  width: auto;
+  float: none;
+  clear: both;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px 0;
+}
+
+.question-list .question > div,
+.contributor-list .contributor > div,
+.activity-list .activity > div,
+.flagging-list .flagging > div {
+  float: left;
+}
+
+.question-list .answers-count,
+.question-list .votes-views-counts,
+.contributor-list .count {
+  margin: 0 30px 0 10px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.question-list .answers-count span,
+.question-list .votes-views-counts span,
+.contributor-list .count {
+  display: block;
+  width: 60px;
+}
+
+.question-list .answers-count {
+  border: 1px solid #d4d4d4;
+}
+
+.question-list .accepted {
+  border: 1px solid #418f36;
+  background: none;
+  font-weight: normal;
+}
+
+.question-list .answers-count span {
+  width: 58px;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.question-list h3,
+.question-list .contribution,
+.question-list .answer-tag-list,
+.question-list .product-list {
+  width: 640px;
+  margin: 0;
+}
+
+.question-list h3 {
+  width: 615px;
+  padding: 0 25px 5px 0;
+}
+
+.contributor-list .order {
+  width: 20px;
+  color: #888888;
+  font-weight: bold;
+}
+
+.contributor-list h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+h2 .profile__stats li {
+  font-weight: normal !important;
+}
+
+#current_user_avatar_link{
+  text-decoration: none;
+}
+
+.contributor-list .avatar {
+  width: 85px;
+}
+
+.contributor-list .contributor_profile {
+  width: 335px;
+}
+
+.contributor-list .contributor_profile p {
+  padding: 0 15px 0 0;
+}
+
+.contributor-list .count {
+  width: 75px;
+  margin: 0;
+  padding: 0;
+  color: #888888;
+}
+
+.contributor-list .count span {
+  display: block;
+  font-size: 2em;
+  line-height: 1;
+}
+
+.contributor-list .count .highlighted {
+  color: #121212;
+  font-weight: bold;
+}
+
+.flagging-list .flagging {
+  padding: 5px 0;
+}
+
+.question-wrapper,
+.contributor-wrapper {
+  border: 1px solid #d4d4d4;
+  padding: 15px;
+  background-color: #f7f7f7;
+}
+
+.contributor-wrapper {
+  border-bottom: 0;
+}
+
+.question-content-flag-icon,
+.support-answer-icon {
+  float: right !important;
+}
+
+.question-content-flag-icon div,
+.support-answer-icon div {
+  width: auto;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+.avatar-img {
+  max-width: 65px !important;
+  border: 1px solid #c1c1c1 !important;
+}
+
+.contributor-wrapper .avatar {
+  width: 155px;
+  float: left;
+}
+
+.contributor-wrapper .avatar img {
+  width: auto;
+  max-width: 125px;
+  max-height: 125px;
+}
+
+
+.activity div {
+  width: 690px;
+}
+
+.activity .avatar {
+  width: 50px;
+}
+
+.activity-list .avatar-img {
+  max-width: 50px !important;
+}
+
+.activity p {
+  margin: 0 0 3px;
+  font-size: 11px;
+}
+
+.activity p.time {
+  margin: 0;
+  color: #686868;
+}
+
+.flagging div {
+  width: 620px;
+}
+
+.flagging div.time {
+  width: 120px;
+}
+
+.tools_spacer {
+  margin-bottom: 20px;
+}
+
+.comment_spacer {
+  margin-bottom: 10px;
+}
+
+.vote button,
+.accept button {
+  padding: 0;
+  font: 12.75px Arial, Helvetica, sans-serif;
+  color: #187dbb;
+  vertical-align: bottom;
+  text-decoration: none;
+}
+
+.vote button.btn:focus,
+.accept button.btn:focus {
+  outline: 0;
+}
+
+.vote button.btn[disabled],
+.vote button.btn[disabled]:visited,
+.vote button.btn[disabled]:active,
+.vote button.btn[disabled]:focus,
+.vote button.btn[disabled]:hover {
+  color: #187dbb;
+  opacity: .55;
+}
+
+.vote_icon {
+  border: 0 !important;
+  margin-right: 5px;
+}
+
+.vote_prompt {
+  font-size: 12.75px;
+}
+
+.vote_count {
+  padding: 0;
+  display: inline-block;
+  font-size: 12.75px;
+  vertical-align: text-top;
+}
+
+.pipe {
+  width: 1px;
+  height: 12.75px;
+  border-left: 1px solid #ccc;
+  margin-left: 7px;
+  margin-right: 5px;
+}
+
+.vote {
+  vertical-align: bottom !important;
+}
+
+.vote,
+.accept,
+.unaccept,
+.flag,
+.edit,
+.question-close,
+.delete,
+.answer-link {
+  padding: 0 0 3px;
+  background-image: none;
+  margin-bottom: 8px;
+  font-size: 12.75px;
+  line-height: 1.00 !important;
+}
+
+.vote button:visited,
+.accept button:visited,
+.unaccept a:visited,
+.flag a:visited,
+.edit a:visited,
+.question-close a:visited,
+.delete a:visited,
+.comment-tools .comment_link:visited,
+.answer-link a:visited,
+
+.vote button:active,
+.accept button:active,
+.unaccept a:active,
+.flag a:active,
+.edit a:active,
+.question-close a:active,
+.delete a:active,
+.comment-tools .comment_link:active,
+.answer-link a:active,
+
+.vote button:focus,
+.accept button:focus,
+.unaccept a:focus,
+.flag a:focus,
+.edit a:focus,
+.question-close a:focus,
+.delete a:focus,
+.comment-tools .comment_link:focus,
+.answer-link a:focus {
+  text-decoration: none;
+}
+
+.vote button:hover,
+.accept button:hover,
+.unaccept a:hover,
+.flag a:hover,
+.edit a:hover,
+.question-close a:hover,
+.delete a:hover,
+.comment-tools .comment_link:hover,
+.answer-link a:hover {
+  color: #005695;
+  text-decoration: none;
+}
+
+.flag span,
+.unaccept span,
+.edit span,
+.delete span,
+.question-close span,
+.answer-link span,
+.comment_link span {
+  border: 0 !important;
+  margin-right: 5px;
+  font-size: 12.75px !important;
+  vertical-align: bottom !important;
+}
+
+.accept span {
+  border: 0 !important;
+  margin-right: 5px;
+  font-size: 12.75px !important;
+}
+
+.comment_edit,
+.comment_flag,
+.comment_delete,
+.comment_link {
+  display: inline;
+  float: right;
+  margin: 0 0 0 15px;
+}
+
+.comment_link {
+  padding-bottom: 3px;
+  line-height: 1.00 !important;
+  vertical-align: bottom !important;
+}
+
+.comment_delete {
+  position: relative;
+  top: 1px;
+}
+
+.comment_link span {
+  position: relative;
+  top: 1px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.permalink:hover {
+  opacity: 1;
+}
+
+.answer-tools .permalink {
+  display: block;
+  margin: 20px 0 0 0;
+  padding: 0 0 0 25px;
+  color: #686868;
+  background: transparent url(../images/icon_link.gif) no-repeat 4px center;
+  text-decoration: none;
+}
+
+.add-comment {
+  padding: 10px 0 0 24px;
+}
+
+.comments h2 {
+  margin: 10px 0 0;
+  padding: 0 0 0 24px;
+  font-size: 1.1em;
+  background: transparent url(/matlabcentral/answers/assets/comment.png) no-repeat 0 center;
+}
+
+.toggle-comments {
+  display: none;
+}
+
+.js .toggle-comments {
+  display: block;
+  padding: 0 0 5px 0;
+}
+
+.toggle-comments a {
+  color: #686868;
+  text-decoration: underline;
+}
+
+.comment .contribution {
+  float: left;
+  padding: 4px 0 5px 11px;
+}
+
+.comment-body,
+.comment-form {
+  clear: both;
+  border: 1px solid #ececec;
+  padding: 8px 10px;
+  background-color: #ffffff;
+}
+
+.comment-form {
+  margin: 5px 0 10px 24px;
+}
+
+.comment-form p {
+  margin: 0;
+}
+
+.comment .comment-form {
+  margin-left: 0;
+}
+
+.comment .flaggings {
+  clear: both;
+}
+
+.comment-form.matlabmarkup .ui-wrapper,
+.comment-form textarea.ui-resizable {
+  min-height: 75px;
+}
+
+.attached-files .icon-remove.icon_16.add_font_color_emphasize {
+  margin-left: -5px;
+  margin-bottom: 3px
+}
+
+.contribution {
+  padding: 0 0 5px 0;
+}
+
+.contribution a.accepted-answer {
+  font-weight: bold;
+  color: #418f36;
+}
+
+.latest-activity strong {
+  color: #686868;
+}
+
+.view-counts-desktop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.flaggings {
+  margin: 5px 0 10px;
+  border: 1px solid #d6d6d6;
+  padding: 5px 5px 5px 30px;
+  background: #fff url(/matlabcentral/images/icon_flag_yellow.png) no-repeat 4px 3px;
+}
+
+.flagging-list {
+    padding-left:10px
+}
+
+.toggle-flaggings {
+  float: right;
+}
+
+h1 .manage-spam {
+  float: right;
+  font-size: 8pt;
+}
+
+
+.tags {
+  clear: both;
+}
+
+.tags,
+.products {
+  width: 355px;
+  float: left;
+  padding: 15px 0 0 0;
+}
+
+.tags {
+  width: 385px;
+}
+
+.tags h2,
+.products h2 {
+  position: relative;
+  margin: 0;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  padding: 5px;
+  font-size: 1em;
+  background-color: #f7f7f7;
+}
+
+.tags h2 {
+  margin-right: 30px;
+}
+
+.tags h2 a,
+.products h2 a {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  padding: 0 5px 0 16px;
+  font-weight: normal;
+  background: transparent url(/matlabcentral/answers/assets/bullet_go.png) no-repeat 0 80%;
+}
+
+.answer-tag-list p,
+.product-list p {
+  margin: 0;
+}
+
+.answer-tag-list em,
+.product-list em {
+  color: #999999;
+  font-style: italic;
+}
+
+
+.flagging-list li form,
+.attached-files li form {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.separator {
+    border: none;
+}
+
+.separator:after {
+  content: ",";
+  display: inline-block;
+  padding: 0 5px 0 0;
+}
+
+.answer-tag-list li button,
+.product-list li button,
+.flagging-list li button,
+.attached-files li button {
+   padding: 0px 3px 2px 0px;
+}
+
+.flagging-list li button {
+  background-position: 50% 25%;
+}
+
+.tip {
+  margin: 0;
+  padding: 5px 0 0 0;
+  color: #686868;
+}
+
+h1 .tip {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+label .tip {
+  display: block;
+  font-weight: normal;
+}
+
+.question-list .answer-tag-list,
+.question-list .product-list {
+  float: left;
+  clear: left;
+  border: none;
+  padding: 5px 0 0;
+}
+
+.question-list .answer-tag-list > span,
+.question-list .product-list > span {
+  display: block;
+  float: left;
+  width: 60px;
+  padding-top: 1px;
+  font-weight: bold;
+}
+
+.question-list .answer-tag-list ul,
+.question-list .product-list ul {
+  display: block;
+  float: left;
+  width: 580px;
+}
+
+
+.answers {
+  clear: both;
+  padding: 15px 0 0 0;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.answers > h2 {
+  margin: 0;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  padding: 5px 0 5px 16px;
+  color: #bf8c02;
+  font-size: 1.3em;
+}
+
+.answers > p {
+  margin: 0;
+  border-right: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+  padding: 5px 0 5px 16px;
+}
+
+.answer-wrapper {
+  clear: both;
+  border-top: 1px solid #ececec;
+  border-right: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+  padding: 15px;
+}
+
+.accepted {
+  color: #418f36;
+  font-weight: bold;
+  border-color: #418f36 !important;
+}
+
+.accepted h3 {
+    color: #418f36;
+}
+
+.add-answer {
+  border-right: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+}
+
+.add-answer h3 {
+  margin: 0;
+  border-top: 5px solid #ececec;
+  padding: 10px 0 5px 15px;
+}
+.add-answer .error h3 {
+  border-top: 0;
+}
+.add-answer p.rate-limited {
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.answer-body,
+.answer-form {
+  border: 1px solid #ececec;
+  padding: 8px 10px;
+}
+
+.answer-form {
+  padding-top: 0;
+}
+
+.create-answer-form {
+  border: none;
+  padding: 10px 15px 10px 15px;
+}
+
+.accepted-answer-button-form button {
+  font-weight: bold;
+}
+
+.question-body img,
+.question-form .matlabmarkup-preview-body img,
+.answer-body img,
+.answer-form .matlabmarkup-preview-body img {
+  max-width: 585px;
+}
+
+.edit_question_form {
+  padding-bottom: 29px;
+}
+
+.comment-body img,
+.comment-form .matlabmarkup-preview-body img {
+  max-width: 540px;
+}
+
+
+/* Displayed code */
+
+.question-body p, .answer-body p, .comment-body p, .matlabmarkup-preview-body p {
+  line-height: 1.4;
+  margin: 0 0 7px 0;
+}
+
+.question-body pre, .answer-body pre, .comment-body pre, .matlabmarkup-preview-body pre {
+  line-height: 1.4;
+}
+
+/* Tabbed panels */
+
+.tab-bar {
+  clear: left;
+  border-right: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+  background-color: #f7f7f7;
+}
+
+#mainbody .tab-bar ul {
+  list-style: none outside none;
+  position: relative;
+  top: 1px;
+  margin: 0;
+  padding: 0 0 0 9px;
+}
+
+.tab-bar li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.tab-bar li a {
+  display: inline-block;
+  width: 93px;
+  min-height: 20px;
+  padding: 5px 0 0 0;
+  background: transparent url(/matlabcentral/images/tab_inactive.gif) no-repeat 0 0;
+  text-align: center;
+}
+
+/*Changes made for site 6 */
+.active-tab-profile #profile_tab a,
+.active-tab-questions #questions_tab a,
+.active-tab-answers #answers_tab a,
+.active-tab-comments #comments_tab a {
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+/* Changes end */
+
+.tab-bar .pagination {
+  padding: 3px 3px 0 0;
+}
+
+
+.tab-body .pagination {
+  padding: 3px 4px 0 0;
+}
+
+
+/* Contributor profiles */
+
+.edit-profile {
+  display: block;
+  margin: 15px 0 0;
+  padding: 0 5px 0 16px;
+  background: transparent url(/matlabcentral/answers/assets/bullet_go.png) no-repeat 0 80%;
+}
+
+.hcard {
+  width: 360px;
+  float: left;
+}
+
+.hcard p {
+  font-size: 8pt;
+}
+
+.hcard dl {
+  clear: left;
+  padding: 0 0 5px;
+}
+
+.hcard dt {
+  font-weight: bold;
+}
+
+.hcard .personal-profile {
+  padding-top: 5px;
+}
+
+.hcard .personal-profile dt,
+.hcard .personal-profile dd {
+  width: 100%;
+  float: none;
+  margin: 0;
+}
+
+.reputation {
+  width: 150px;
+  float: right;
+  border: 1px solid #c3c3c3;
+  padding: 6px;
+  background-color: #fff;
+}
+
+.reputation h2 {
+  margin: 0;
+  font-size: 1em;
+}
+
+.reputation .value {
+  margin: 0 0 10px;
+  line-height: 1;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.reputation .question-count {
+  padding: 6px 0;
+}
+
+.earned-privileges .privilege-earned {
+  width: 40px;
+}
+
+.earned-privileges .reputation-required {
+  width: 120px;
+}
+
+
+/* Tag & product multicomplete */
+
+.ui-autocomplete {
+  width: 100%;
+  list-style: none outside none;
+  position: absolute;
+  float: left;
+  margin: 0;
+  border: 1px solid #c3c3c3;
+  padding: 0;
+  background-color: #fdfdfd;
+  text-align: left;
+}
+
+.ui-autocomplete li {
+  width: 100%;
+  clear: left;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.ui-autocomplete li::before {
+  min-width: 0 !important;
+  width: 0 !important;
+  content: "" !important;
+}
+
+.ui-autocomplete a {
+  cursor: default;
+  display: block;
+  padding: 3px 24px 3px 6px;
+  color: #121212;
+  font-family: sans-serif;
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+.ui-autocomplete a.ui-state-hover,
+.ui-autocomplete a.ui-state-focus {
+  background-color: #e3e3e3;
+}
+
+.multicomplete-token {
+  display: inline-block;
+  font-size: 1em;
+}
+
+.multicomplete-token:after {
+  content: ",";
+  display: inline-block;
+  padding: 0 5px 0 0;
+}
+
+.multicomplete-error {
+  color: #900;
+}
+
+.multicomplete-error span {
+  font-weight: bold;
+}
+
+
+/* Question autosuggest */
+
+ul.question-autosuggest {
+  max-height: 155px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+ul.question-autosuggest li.autosuggest-label {
+  background-color: #DBE4EF;
+}
+
+ul.question-autosuggest li.autosuggest-label span {
+  display: inline-block;
+  padding: 3px 0 3px 6px;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+ul.question-autosuggest li {
+  padding: 0;
+}
+
+ul.question-autosuggest li a {
+  width: 100%;
+  display: block;
+  float: left;
+  clear: left;
+  padding: 0;
+  position: relative;
+}
+
+ul.question-autosuggest li a strong {
+  background-color: #DCE3ED;
+  font-weight: normal;
+}
+
+ul.question-autosuggest li span.answers-count {
+  width: 30px;
+  margin: 4px 12px 4px 6px;
+  border: 1px solid #686868;
+  padding: 2px 0 0;
+  background: none;
+  background-color: #ffffff;
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+  font-size: 9pt;
+  text-align: center;
+}
+
+ul.question-autosuggest li span.accepted {
+  border: 1px solid #55b947;
+  color: #55b947;
+}
+
+ul.question-autosuggest li span.title {
+  margin-bottom: 2px;
+  margin-top: 4px;
+  display: block;
+  line-height: 24px;
+  overflow: hidden;
+  position: relative;
+  word-wrap: break-word;
+}
+
+ul.question-autosuggest li span.support-answer {
+  margin-left: 4px;
+  display: inline;
+  position: relative;
+}
+
+ul.question-autosuggest li span.support-answer-hover{
+  width: 218px;
+  padding: 2px 10px 0 10px;
+  border: 1px solid #d4d4d4;
+  background-color: #f7f7f7;
+  line-height: 20px;
+  overflow: visible;
+  position: absolute;
+  z-index: 9999;
+}
+
+/* jQuery UI dialog */
+
+.ui-dialog {
+  position: absolute;
+  word-wrap: break-word;
+  border: 1px solid #c3c3c3;
+  background-color: #fff;
+  -moz-box-shadow:    0 0 10px 4px #d4d4d4;
+  -webkit-box-shadow: 0 0 10px 4px #d4d4d4;
+  box-shadow:         0 0 10px 4px #d4d4d4;
+  text-align: left;
+}
+
+.ui-dialog-titlebar {
+  cursor: move;
+  position: relative;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 10px 20px 10px 31px;
+  background: #f7f7f7 url(../images/gripper.png) no-repeat 5px center;
+}
+
+.ui-dialog-title {
+/*Changes for site 6  font-size: 1.1em; */
+  font-weight: bold;
+}
+
+.ui-dialog-titlebar-close {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  width: 30px;
+  height: 20px;
+  overflow: hidden;
+  border: 1px solid #f7f7f7;
+  background: transparent url(../images/close-button.png) no-repeat center center;
+}
+
+.ui-dialog-titlebar-close:hover {
+  border: 1px solid #d4d4d4;
+  background-color: #e3e3e3;
+}
+
+.ui-dialog-titlebar-close span {
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.ui-dialog-content {
+  padding: 10px 20px 15px 31px;
+}
+
+.ui-dialog-compact .ui-dialog-titlebar {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+.ui-dialog-compact .ui-dialog-title {
+  display: none;
+}
+
+.ui-dialog-compact .ui-dialog-titlebar-close {
+  right: 0;
+  top: 0;
+  border: 1px solid #ffffff;
+}
+
+
+.permalink-dialog {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 10px 15px !important;
+}
+
+.permalink-dialog p {
+  margin: 0;
+  padding: 0;
+}
+
+.permalink-dialog .link-wrapper {
+  margin: 5px 0 0 0;
+  border: 1px solid #d4d4d4;
+  padding: 5px;
+}
+
+.permalink_buttons {
+  margin-top: 5px;
+}
+
+.word_break {
+  word-break: break-all;
+}
+
+
+
+/* back port from Bootstrap */
+
+button {
+    font-family: inherit;
+}
+/* Customized style changes
+----------------------------*/
+#pagefacets {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+.search_refine h3{
+    font: bold 15px/19px Arial,Helvetica,sans-serif;
+    margin-left: 5px;
+}
+.search_refine li a {
+  padding: 5px 7px;
+  display: block;
+}
+.search_refine .refine_category_count {
+  margin: 0 0 5px 7px;
+  display: block;
+  float: right;
+}
+.search_refine_scroll {
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+.search-tools {
+    margin-top: 5px
+}
+.btn-group-xs .btn-group{
+    margin-top: -5px
+}
+.btn-default {
+    color: #333 !important
+}
+.votes-views-counts {
+    margin: 10px 0 5px 0;
+    width: 84px;
+}
+.ui-wrapper {
+    width: auto !important;
+}
+
+.multicomplete-products {
+    outline: none !important;
+}
+.multicomplete {
+    border:none !important;
+}
+.multicomplete-wrapper input {
+    width: 100% !important;
+}
+.add-edit-production .add-edit-tag {
+    margin-top:5px;
+}
+.contributors-list td .col-md-1.col-sm-12.text-center span {
+    font-size: 1.8em;
+    display:block;
+}
+.contributors-list td .highlighted {
+    color: #121212;
+    font-weight: bold;
+}
+.contributors-list p {
+  word-break: break-word;
+}
+.question-landing {
+    width: 84px;
+    margin-bottom: 0px !important;
+}
+.question-landing-title {
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+.question-landing .panel-body {
+  padding: 15px 10px;
+}
+.dl-horizontal dt {
+  width: 30% !important
+}
+.dl-horizontal dd {
+  margin-left: 180px !important
+}
+.product-list ul {
+  display:inline;
+}
+.answer-tag-list ul {
+  display:inline;
+}
+.col-xs-3.comment-tools .flag {
+  width: 70px !important;
+}
+.comment {
+  padding-left:0px;
+}
+.comment .panel-body {
+  padding: 5px 5px 5px 5px;
+}
+.contributor-page .avatar-img {
+  min-width: 120px !important;
+  max-width: 120px !important;
+  border: 1px solid #c1c1c1 !important;
+}
+.nugget_container {
+  margin-bottom: 20px
+}
+a[class*="icon-remove"] {
+  padding-left: 5px !important
+}
+.tools-no-paddings {
+  padding: 0px
+}
+.contributor-question table tr:first-child td {
+  border-top: none;
+}
+.col-sm-12.col-xs-12.col-md-10.small {
+  word-break: break-word;
+}
+.flagging-date, .comment-date, .question-ask-date, .answered-date, .answered-edit-date {
+  white-space:nowrap;
+}
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-compact {
+  max-width: 100% !important;
+  width: auto !important
+}
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable {
+  max-width: 100% !important;
+  width: auto !important
+}
+
+.refinable {
+  margin-bottom: 0px
+}
+.answer-tag-list li, .product-list li {
+  padding-right: 0px
+}
+span.icon-remove.icon_16.add_font_color_emphasize {
+  margin-left: 0px
+}
+.activity-list-content, .flagging-list-content {
+  word-break: break-word;
+}
+.contributor-page-popup {
+  font: 15px/21px Arial, Helvetica, sans-serif;
+}
+.question-tools .flag, .tools-no-paddings .flag {
+  min-width: 42px;
+}
+.comment-tools {
+  padding-bottom: 12px;
+  white-space: nowrap;
+}
+
+.related_questions .container {
+  width: inherit;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.break_word_wrap {
+  word-break: break-all;
+}
+.rmv_bottom_border {
+  border-bottom: none;
+}
+
+.call_to_action .h1,
+.user_rep_info .h1,
+.my_activity .h1,
+.top_questions .h1,
+.popular_tags .h1,
+.share_knowledge .h1,
+.rep_info .h1,
+.top_contribs .h1 {
+  color: #404040;
+}
+
+.hero_data_banner_container {
+  background: #fff;
+}
+.hero_data_banner {
+  background-image: url(/images/responsive/supporting/apps/answers/bg-answers-section-banner.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.hero_data_main {
+  margin-top: 26px;
+  margin-bottom: 41px;
+}
+.hero_spacer {
+  margin-top: 20px;
+}
+.hero_data_sub {
+  margin-bottom: 50px;
+}
+.hero_data h1 {
+  color: #ffffff;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+.hero_data a,
+.hero_data a:visited {
+  width: 225px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+}
+.hero_data a:hover p {
+  text-decoration: underline;
+}
+.hero_data a:hover p.h1 {
+  text-decoration: none;
+}
+.hero_data .h1,
+.hero_data .h3 {
+  margin-bottom: 1px;
+  color: #ffffff;
+  display: block;
+}
+
+.call_to_action .h1 {
+  margin-bottom: 30px;
+}
+.call_to_action h4 {
+  margin-bottom: 0;
+}
+.call_to_action hr {
+  color: #cccccc;
+}
+#al_query {
+  width: 100%;
+}
+#al_ask_question_btn {
+  margin-bottom: 2px;
+}
+#al_ask_question_btn,
+#al_answer_question_btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.call_to_action .spacer {
+  height: 30px;
+}
+.call_to_answer .h1 {
+  margin-bottom: 30px;
+}
+.call_to_answer a,
+.call_to_answer a:visited {
+  color: #ffffff;
+}
+.call_to_answer_text {
+  display: block;
+}
+.call_to_answer_link {
+  display: block;
+}
+
+.get_started p {
+  margin-bottom: 0;
+}
+.get_started_spacer {
+  margin-bottom: 15px;
+}
+.get_started .media {
+  margin-bottom: 0;
+}
+.arrows_forward {
+  width: 40px !important;
+}
+#getting_started_accordion .icon-arrow-open-down,
+#getting_started_accordion .icon-arrow-open-up {
+  margin-top: 0;
+}
+
+.contributor_tabs {
+  margin-top: 30px;
+}
+
+.user_rep_info .media {
+  margin-bottom: 0;
+}
+.user_rep_text h2 {
+  color: #999999;
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.rep_info_sect a,
+.rep_info_sect a:visited {
+  width: 100%;
+  color: #007DD9;
+  display: block;
+  text-decoration: none;
+}
+.rep_info_sect a:hover {
+  background-color: #F5F5F5;
+}
+.rep_info_sect a p {
+  margin-bottom: 0;
+}
+#rep_modal {
+  color: #999999;
+}
+#rep_modal,
+#rep_modal h4,
+#q_and_a_modal,
+#q_and_a_modal h4 {
+  text-align: left;
+}
+.rep_modal_link_text {
+  padding: 2px;
+  display: block;
+}
+.rep_modal_link_rep {
+  color: #404040;
+  display: block;
+  font-size: 32px;
+  line-height: 35px;
+}
+.rep_modal_link_stat {
+  color: #404040;
+  display: block;
+}
+
+.rep_modal_table th,
+.rep_modal_table .has_priv {
+  color: #333333;
+}
+.rep_points {
+  width: 10%;
+  text-align: right;
+}
+.rep_privs {
+  width: 90%;
+}
+
+.modal_close_footer {
+   border-top: 0px;
+ }
+
+.top_questions .spacer {
+  margin-bottom: 5px;
+}
+
+.top_questions .view_count {
+  margin-right: 10px;
+  color: #606060;
+  font-size: 12px;
+  line-height: 90%;
+  text-align: right;
+}
+
+.top_questions .view_count_label {
+  font-size: 10px;
+}
+
+.top_questions .h1,
+.share_knowledge .h1 {
+  margin-bottom: 30px;
+}
+
+.share_knowledge .try_prompt {
+  margin-bottom: 30px;
+}
+.share_knowledge .media-body h3,
+.share_knowledge blockquote {
+  margin-left: 20px;
+}
+.share_knowledge blockquote {
+  border-left: 5px solid #CCC;
+  margin-bottom: 10px;
+}
+.share_knowledge_spacer {
+  margin-top: 50px;
+}
+#landing_cta1 {
+  width: 125px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.question_hdr {
+  height: 52px;
+  overflow: hidden;
+}
+.question_hdr a,
+.question_hdr a:active,
+.question_hdr a:hover,
+.question_hdr a:focus,
+.question_hdr a:visited {
+  color: #404040;
+}
+.question_body {
+  height: 88px;
+  margin-bottom: 10px;
+  color: #999;
+  overflow: hidden;
+}
+
+.popular_tags .h1 {
+  margin-bottom: 25px;
+}
+.pill_tag {
+  padding: 4px 8px;
+  border: 1px solid #187dbb;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: transparent;
+  color: #187dbb;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 120%;
+  text-align: left;
+  vertical-align: middle;
+  -moz-user-select: none;
+}
+.pill_tag:hover,
+.pill_tag:active,
+.pill_tag:focus,
+.pill_tag:visited
+ {
+  border-color: #005695;
+  color: #005695;
+  text-decoration: none;
+}
+
+.rep_info h2 {
+  margin-bottom: 30px;
+}
+.rep_info_column {
+  padding-bottom: 0;
+}
+.rep_info a {
+  margin-top: 2px;
+}
+
+.top_contribs h2 {
+  margin-bottom: 30px;
+}
+.top_contribs_hdr a {
+  margin-top: 12px;
+}
+.top_contrib {
+  min-width: 260px;
+}
+.top_contrib .media {
+  margin-bottom: 10px;
+}
+.top_contrib_stats {
+  min-width: 155px;
+}
+
+.questions_by_product_spacer {
+  height: 26px;
+}
+
+#error_modal .modal-content {
+  border-radius: 6px;
+}
+
+#error_modal .modal-body {
+  padding-bottom: 0;
+}
+
+#error_modal .alert {
+  margin-bottom: 0;
+}
+
+.package{
+  position:relative;
+  background-color:#fff;
+  overflow:hidden
+}
+
+.package__head{
+  overflow:hidden
+}
+
+.package__img img{
+  width:100%;
+  height:auto
+}
+
+.package__img--search{
+  max-height:120px
+}
+
+.package__overview{
+  min-height:90px;
+  padding:10px 10px 0;
+  overflow:hidden
+}
+
+.package__overview h3{
+  margin-top:0;
+  color:#333;
+  font:normal 400 18px/1.4 'futura-pt-n4','futura-pt','Arial',Helvetica, sans-serif
+}
+
+.package__overview p{
+  font-size:12px;
+  line-height:18px
+}
+
+.package__actions{
+  width:99.5%;
+  padding:4px 10px 3px;
+  background:#fff;
+  bottom:0px;
+  font-size:12px;
+  left:1px;
+  position:absolute
+}
+
+.tag{
+  margin-bottom:0;
+  margin-right:10px;
+  color:#999;
+  display:inline-block;
+  font-size:12px
+}
+
+.package__actions p .tag .pull-right{
+  bottom:3px;
+  position:absolute;
+  right:0
+}
+
+.tag em{
+  padding:1px;
+  font-style:normal;
+  line-height:normal
+}
+
+.tag--time{
+  bottom:3px;
+  color:#db5f23;
+  position:absolute;
+  right:0
+}
+
+.package--card--large{
+  height:195px;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 5px;
+  outline:1px solid #ddd;
+  box-shadow:1px 1px 2px rgba(0,0,0,0.35);
+  display:inline-block;
+  position:relative
+}
+
+.package--card--large:hover{
+  outline-color:#FF8D54;
+  outline:1px solid rgba(252,86,0,0.3);
+  box-shadow:0px 0px 2px 2px rgba(252,86,0,0.3)
+}
+
+.package--card--large a {
+  text-decoration:none
+}
+
+.package__img{
+  height:105px;
+  border-bottom:1px solid #ededed;
+  overflow:hidden
+}
+
+.package__img__description{
+  height:100%;
+  padding:15px 15px 0 85px;
+  background-color:#ededed;
+  overflow:hidden;
+  position:relative;
+  line-height:1.5
+}
+
+.package__img__description:after{
+  width:225px;
+  height:1.2em;
+  background:#ededed;
+  bottom:0;
+  content:'';
+  display:block;
+  position:absolute;
+  right:0
+}
+
+.package__img__description span{
+  color:#ccc;
+  margin-left:-75px;
+  float:left
+}
+
+.package__img__description p{
+  display:table-cell;
+  color:#999;
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align:top;
+  word-break:break-all;
+  word-break:break-word;
+}
+
+.package__img__description p:after{
+  width:15px;
+  height:90px;
+  content:'';
+  background:#ededed;
+  position:absolute;
+  right:0;
+  top:0
+}
+
+.package__spacer{
+  margin-bottom: 10px;
+}
+
+.share_knowledge .package--card--large{
+  margin-bottom: 0;
+}
+
+span .icon-mw-staff,
+span .icon-mw-mvp,
+span .icon-mw-risingstar {
+  display: inline-block;
+}
+.icon-mw-staff,
+.icon-mw-mvp,
+.icon-mw-risingstar {
+  font-size: 80%;
+}
+
+div[id$="_attached_files"] {
+  margin-bottom: -10px;
+}
+
+.icon-attachment {
+  padding-right: 2px;
+}
+
+div[id^="answer_"][id$="_attached_files"] {
+  margin-top: -20px;
+}
+
+div[id^="comment_"][id$="_attached_files"] > div > div.attached-files {
+  margin-top: -8px;
+  margin-bottom: -10px;
+}
+
+.attached-files li button {
+  padding-left: 2px !important;
+}
+
+div[id^="answer_"] div.accepted, div[id^="answer_"] form[id^="accept_button_answer_"] {
+  padding-bottom: 5px;
+}
+.matlabmarkup textarea {
+  resize: none;
+  display: block;
+  overflow: auto;
+  min-height: 150px;
+  border: 0;
+  outline: none;
+  padding: 0;
+  font-size: 1.1em;
+  font-family: monospace;
+}
+
+.matlabmarkup-wrapper {
+  position: relative !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  border: 1px solid #c3c3c3;
+  background-color: #ffffff;
+  border-radius:5px;
+}
+
+.matlabmarkup .ui-wrapper {
+  margin: 0 !important; /* without this !important jQuery UI overrides margin with some wacky calculations */
+  padding: 5px;
+}
+
+.matlabmarkup .ui-resizable-handle.ui-resizable-se {
+  width: 16px;
+  height: 16px;
+  /* Base64-encoded assets/images/gripper-se-dots.png */
+  background:
+    transparent
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAPUExURQAAAKKiov///6Ojo+Li4l22cusAAAABdFJOUwBA5thmAAAAKUlEQVQI12NgwAcYBaC0EVRACVUWIs9oBJVXQpYHyoqA5EGyzEZQWSUASWACa1CeDjwAAAAASUVORK5CYII=)
+    no-repeat 0 0;
+}
+
+.matlabmarkup-toolbar {
+  height: 24px;
+}
+
+.matlabmarkup-toolbar a {
+  display: inline-block;
+  height: 22px;
+  width: 24px;
+  overflow: hidden;
+  margin: 0 4px 2px 0;
+  padding: 3px 2px 1px 2px;
+  border: 1px solid #a3a3a3;
+  text-decoration: none;
+  color: #686868;
+  font-family: sans-serif;
+  font-size: 8pt;
+  line-height: 12pt;
+  /* Base64-encoded assets/images/toolbar.png */
+  background:
+    #fff
+    url(data:image/png;base64,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)
+    no-repeat 0 0;
+}
+
+.matlabmarkup-toolbar span {
+  cursor: pointer;
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+a.matlabmarkup-code span,
+a.matlabmarkup-help span {
+  text-indent: 0;
+}
+
+a.matlabmarkup-bold {
+  background-position: 1px -143px;
+}
+
+a.matlabmarkup-italic {
+  background-position: -17px -125px;
+}
+
+a.matlabmarkup-monospaced {
+  background-position: -35px -107px;
+}
+
+a.matlabmarkup-bulleted-list {
+  background-position: -53px -89px;
+}
+
+a.matlabmarkup-numbered-list {
+  background-position: -71px -71px;
+}
+
+a.matlabmarkup-code {
+  width: auto;
+  margin-right: 18px;
+  margin-left: 18px;
+  padding: 3px 6px 1px 22px;
+  background-position: -88px -53px;
+}
+
+a.matlabmarkup-hyperlink {
+  background-position: -107px -35px;
+}
+
+a.matlabmarkup-image {
+  background-position: -125px -16px;
+}
+
+a.matlabmarkup-attach-file {
+  background-position: -144px 2px;
+}
+
+a.matlabmarkup-help {
+  width: auto;
+  margin: 0 0 2px 16px;
+  border: 1px solid transparent;
+  padding: 3px 6px 1px 20px;
+  background-color: transparent;
+  background-position: 0 2px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKkSURBVDjLpZPdT5JhGMb9W+BPaK3matVqndXWOOigA6fmJ9DUcrUMlrN0mNMsKTUznQpq6pyKAm8CIogmypcg8GIiX8rHRHjhVbPt6o01nMvZWge/k3vP9duuZ/edAyDnf/hjoCMP2Vr3gUDj3CdV6zT1xZ6iFDaKnLEkBFOmPfaZArWT5sw60iFP+BAbOzTcQSqDZzsNRyCNkcVoaGghzDlVQKylOHJrMrUZ2Yf52y6kc36IxpyoH1lHF7EBgyMKV4jCJ5U/1UVscU4IZOYEa3I1HtwI01hwxlDLhDoJD/wxGr5YGmOLAdRIrVCuhmD3JdA6SQabx12srGB0KSpc86ew4olDOGjH4x4z0gdHDD9+c4TaQQtq+k2Yt0egXYugTmoVZgV9cyHSxXTtJjZR3WNCVfcK/NE0ppYDUNu2QTMCtS0IbrsOrVMOWL27eNJtJLOCDoWXdgeTEEosqPxoBK/TwDzWY9rowy51gJ1dGr2zLpS2aVH5QQ+Hbw88sZ7OClrGXbQrkMTTAQu4HXqUv9eh7J0OSfo7tiIU+GItilpUuM/AF2tg98eR36Q+FryQ2kjbVhximQu8dgPKxPMoeTuH4tfqDIWvCBQ2KlDQKEe9dBlGTwR36+THFZg+QoUxAL0jgsoOQzYYS+wjskcjTzSToVAkA7Hqg4Spc6tm4vgT+eIFVvmb+eCSMwLlih/cNg0KmpRoGzdl+BXOb5jAsMYNjSWAm9VjwesPR1knFilPNMu510CkdPZtqK1BvJQsoaRZjqLGaTzv1UNp9EJl9uNqxefU5QdDnFNX+Y5Qxrn9bDLUR6zjqzsMizeWYdG5gy6ZDbk8aehiuYRz5jHdeDTKvlY1IrhSMUxe4g9SuVwpdaFsgDxf2i84V9zH/us1/is/AdevBaK9Tb3EAAAAAElFTkSuQmCC);
+}
+
+
+.matlabmarkup-dialog {
+  overflow: hidden;
+  clear: left;
+  margin: 0 0 5px 0;
+  border: 1px solid #c3c3c3;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 8pt;
+  line-height: 12pt;
+  background-color: #ffffff;
+}
+
+.matlabmarkup-dialog .errors {
+  margin: 0 0 5px 0;
+  border: 1px solid #d12f19;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 8pt;
+  line-height: 12pt;
+  background-color: #ffffff;
+}
+
+.matlabmarkup-dialog .title {
+  margin: 0 0 7px 0;
+  font-weight: bold;
+}
+
+.matlabmarkup-dialog .errors .title {
+  padding: 0 0 0 40px;
+  color: #d12f19;
+}
+
+.matlabmarkup-dialog .errors ul {
+  list-style-position: inside;
+  padding: 0 0 0 40px;
+}
+
+.matlabmarkup-dialog div {
+  width: 512px;
+}
+
+.matlabmarkup-dialog label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.matlabmarkup-dialog input[type=text] {
+  display: inline-block;
+  width: 390px;
+  border: 1px solid #c3c3c3;
+  padding: 3px 5px;
+}
+
+.matlabmarkup-dialog input.placeholder {
+  color: #aaaaaa;
+}
+
+.matlabmarkup-dialog .buttons {
+  clear: left;
+}
+
+.matlabmarkup-dialog .guidelines {
+  display: inline-block;
+  margin: 10px 0 0;
+  padding: 4px 0 0 20px;
+  text-decoration: none;
+  /* Base64-encoded assets/images/info.png */
+  background:
+    #fff
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKcSURBVDjLpZPLa9RXHMU/d0ysZEwmMQqZiTaP0agoaKGJUiwIxU0hUjtUQaIuXHSVbRVc+R8ICj5WvrCldJquhVqalIbOohuZxjDVxDSP0RgzyST9zdzvvffrQkh8tBs9yy9fPhw45xhV5X1U8+Yhc3U0LcEdVxdOVq20OA0ooQjhpnfhzuDZTx6++m9edfDFlZGMtXKxI6HJnrZGGtauAWAhcgwVnnB/enkGo/25859l3wIcvpzP2EhuHNpWF9/dWs/UnKW4EOGDkqhbQyqxjsKzMgM/P1ymhlO5C4ezK4DeS/c7RdzQoa3x1PaWenJjJZwT9rQ1gSp/js1jYoZdyfX8M1/mp7uFaTR8mrt29FEMQILr62jQ1I5kA8OF59jIItVA78dJertTiBNs1ZKfLNG+MUHX1oaURtIHEAOw3p/Y197MWHEJEUGCxwfHj8MTZIcnsGKxzrIURYzPLnJgbxvG2hMrKdjItjbV11CYKeG8R7ygIdB3sBMFhkem0RAAQ3Fuka7UZtRHrasOqhYNilOwrkrwnhCU/ON5/q04vHV48ThxOCuoAbxnBQB+am65QnO8FqMxNCjBe14mpHhxBBGCWBLxD3iyWMaYMLUKsO7WYH6Stk1xCAGccmR/Ozs/bKJuXS39R/YgIjgROloSDA39Deit1SZWotsjD8pfp5ONqZ6uTfyWn+T7X0f59t5fqDhUA4ry0fYtjJcWeZQvTBu4/VqRuk9/l9Fy5cbnX+6Od26s58HjWWaflwkusKGxjm1bmhkvLXHvh1+WMbWncgPfZN+qcvex6xnUXkzvSiYP7EvTvH4toDxdqDD4+ygT+cKMMbH+3MCZ7H9uAaDnqytpVX8cDScJlRY0YIwpAjcNcuePgXP/P6Z30QuoP4J7WbYhuQAAAABJRU5ErkJggg==)
+    no-repeat 0 3px;
+}
+
+.matlabmarkup-dialog .button {
+  display: inline-block;
+  float: right;
+  margin: 10px 0 0 10px;
+  border: 1px solid #c3c3c3;
+  padding: 3px 10px;
+  text-decoration: none;
+  color: #686868;
+  background-color: #fafafa;
+}
+
+.matlabmarkup-dialog .button.disabled,
+.matlabmarkup-dialog .upload-control-button.disabled {
+  cursor: default;
+  outline: none;
+  border: 1px solid #eaeaea;
+  color: #c3c3c3;
+  background-color: #fafafa;
+}
+
+.matlabmarkup-dialog .button.cancel {
+  border: 1px solid transparent;
+  padding: 3px 0;
+  color: #005fce;
+  background-color: transparent;
+}
+
+.matlabmarkup-dialog .buttons .guidelines:visited,
+.matlabmarkup-dialog .button.cancel:visited {
+  color: #004aa0;
+}
+.matlabmarkup-dialog .buttons .guidelines:hover,
+.matlabmarkup-dialog .button.cancel:hover {
+  text-decoration: underline;
+}
+
+.matlabmarkup-dialog .panel-control {
+  width: 135px;
+  float: left;
+}
+
+.matlabmarkup-dialog .panel-control input,
+.matlabmarkup-dialog .panel-control label {
+  display: block;
+  float: left;
+  font-weight: normal;
+}
+
+.matlabmarkup-dialog .panel-control input {
+  clear: left;
+  padding: 0 0 5px 0;
+}
+
+.matlabmarkup-dialog .panel-control label {
+  padding: 0 0 5px 5px;
+}
+
+.matlabmarkup-dialog .panel {
+  width: 362px;
+  float: left;
+}
+
+.matlabmarkup-dialog .panel label {
+  width: auto;
+  margin: 0 10px 0 0;
+}
+
+.matlabmarkup-dialog .panel input[type=text] {
+  width: 315px;
+}
+
+
+.matlabmarkup-dialog .upload-control-wrapper {
+  width: 350px;
+  border: 1px solid #c3c3c3;
+  padding: 3px;
+}
+
+.matlabmarkup-dialog .upload-control-wrapper.error {
+  border: 1px solid #d12f19;
+}
+
+.matlabmarkup-dialog .upload-control-button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 10px 0 0;
+  border: 1px solid #c3c3c3;
+  padding: 3px 10px;
+  color: #686868;
+  background-color: #fafafa;
+}
+
+.matlabmarkup-dialog .upload-control-wrapper input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 2px 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+
+.matlabmarkup-dialog .upload-control-label {
+  display: inline-block;
+  padding: 4px 0 0;
+  vertical-align: top;
+  color: #aaaaaa;
+}
+
+.matlabmarkup-dialog .file_dialog_cancel {
+  margin-right: 160px;
+}
+
+.matlabmarkup .pending-uploads {
+  margin: 0 !important;
+  border-right: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+  border-left: 1px solid #c3c3c3;
+  padding: 3px 5px;
+  background-color: #ffffff;
+}
+
+.matlabmarkup .pending-uploads span {
+  display: inline-block;
+  padding: 0;
+}
+
+.matlabmarkup .pending-uploads ul {
+  margin-bottom: 0;
+}
+
+.matlabmarkup .pending-uploads li button {
+   padding: 0px 3px 2px 0px;
+}
+
+.matlabmarkup .pending-uploads .icon-remove.icon_16.add_font_color_emphasize {
+  margin-left: -5px;
+  margin-bottom: 3px;
+}
+
+.matlabmarkup .pending-uploads .alert-success {
+  margin-bottom: 0;
+}
+
+.matlabmarkup .pending-uploads .alert-success span {
+  padding: 0;
+}
+
+.matlabmarkup .pending-uploads .alert-success h3 {
+  padding: 0;
+  border-top: 0 !important;
+}
+
+.fade_out_of_view {
+  -webkit-animation: 5s linear 1 both target-fade-out;
+  animation: 5s linear 1 both target-fade-out;
+}
+
+@keyframes target-fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes target-fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.matlabmarkup-preview {
+  clear: left;
+  border: 1px solid #c3c3c3;
+  border-radius:5px;
+}
+
+.matlabmarkup-preview-body {
+  clear: both;
+  min-height: 75px;
+  overflow-x: auto;
+  overflow-y: auto;
+  border-top: 1px solid #eaeaea;
+  padding: 5px;
+  background-color: #fdfdfd;
+  border-radius:5px;
+}
+
+.matlabmarkup-preview-divider {
+  overflow: hidden;
+  padding: 0 35px;
+  font-size: 9pt;
+  background-color: #fafafa;
+  border-radius:5px;
+}
+
+.matlabmarkup-preview-divider span {
+  display: block;
+  float: left;
+  padding: 4px 0;
+  margin-left: -25px;
+}
+
+.matlabmarkup-preview-divider a {
+  display: block;
+  height: 16px;
+  float: right;
+  outline: none;
+  padding: 4px 0 0;
+  font-weight: normal;
+  text-decoration: none;
+  color: #686868;
+  /* Base64-encoded assets/images/on-off.png */
+  background:
+    transparent
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAkCAMAAACzM5rVAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACoUExURQAAADKvJM7OztfX19vb29vb29/f39jY2NnZ2dXV1c/Pz9HR0dTU1NXV1dnZ2RRFFCJiFiRmFh2AFCh6GS6ZICR0GCqHHB2JFDCfIiexFCqNHjCvJCqFHTCuJDClIjCqIyl/HPX19ezs7PT09Ovr6+/v7/Ly8u3t7X65d6bXo4PEfIPFfa3bqorKhXLDbbXes5POj3bGcnnGdYzKhrPdsZLOjoPMgIrRgnxt/OYAAAAhdFJOUwCAGoDVgNUagNWAgNWA1RqAgBrVgNWAGoAagNXV1dXV1WUX3pkAAABtSURBVCjPY2AYIMDOysbCwY4ixKqqqKjOjCLEpqiqpMyHIsSiqKSizIkixKGkrKbCjWo8LycPFxPDSAOSjNLyEuIoQozm+jraUihCsiZmhgYyKEJymkZ6xsIoQiJaproagihCQmIKogL8A+U5AKtPB2otReBdAAAAAElFTkSuQmCC)
+    no-repeat 0 0;
+}
+
+.matlabmarkup-preview-divider a:active,
+.matlabmarkup-preview-divider a:focus {
+  outline: none;
+}
+
+.matlabmarkup-preview-divider .matlabmarkup-preview-refresh {
+  margin-right: 20px;
+  padding-left: 16px;
+  /* Base64-encoded assets/images/refresh.gif */
+  background:
+    transparent
+    url(data:image/gif;base64,R0lGODlhEAAQAMQfAJXG2JXa+ZLO5ChrlkCy4TZ1kiVvpCN0trvo9SN5xTd4lrfh7iR9zo3S+EGz7JDJ4TaCromrvC9ymyV+0Dd3mTl1koe72YvN7LTj+9ne6N3g6v7+/0Cw2Stoh////////yH5BAEAAB8ALAAAAAAQABAAAAV94CeOXumJ5ah6VVFQpXSqX6YgC4JAljGTnYVAwCFcMIffx9OJdDqDB8HRSCiZCpMh0GgwroWTZ2A4JBiTn2nNVk8YiYNhIA6vGJhAwFdSdK4JAQ4EDwMDTX8rBwEXBBxDAIkrBhYQDw8AAAoaGzQeMh4ULhVKJDNrNKmqNCEAOw==)
+    no-repeat 0 3px;
+}
+
+.matlabmarkup-preview-divider .matlabmarkup-preview-toggle {
+  width: 40px;
+  padding-left: 14px;
+  background-position: -5px -14px;
+}
+
+.matlabmarkup-preview-divider .off {
+  background-position: -5px 4px;
+}
+
+.matlabmarkup-preview-divider .hidden {
+  display: none;
+}
+.answer-count-status {
+    font-size: 12.75px;
+	color: #418f36;
+}
+
+.answered {
+    color: #343434;
+}
+
+.main-heading {
+    font-size: 22px;
+	margin-bottom: -2px;
+}
+
+.mwRelatedContent_heading {
+    font-size: 15px;
+	font-family: Arial;
+	padding-top: 10px;
+	border-bottom-color: #CCCCCC;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding-bottom: 8px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.related-title {
+    font-size: 12.75px;
+	font-family: Arial;
+	color:#187dbb;
+	display:inline;
+}

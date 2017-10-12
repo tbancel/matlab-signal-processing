@@ -1,0 +1,1 @@
+% go here for more sfp files  : https://www.egi.com/knowledge-center/item/71-sensor-position-files-for-visualizing-data-in-third-party-software

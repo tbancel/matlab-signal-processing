@@ -1,0 +1,34 @@
+/*
+-----------------------------------
+TOC
+-----------------------------------
+
+Bootstrap Overrides:......Changes to base-Bootstrap CSS
+
+Template Globals:.........Styles for specific responsive templates
+
+Page Globals:.............Styling of HTML and BODY
+
+Site Elements:............Re-usable site elements 	
+
+Structure:................Site structural components
+
+Section Specific:.........Styles for Home and all Sub Pages
+
+Page/Element Specific:....Page, element or flow Specific CSS
+
+Responsive:...............Specific styles for Desktop, Tablet and Mobile
+
+Additive CSS:.............Additive/override CSS
+
+*/
+
+
+
+/* ------------------------------------
+$ Page Globals
+------------------------------------ */
+
+/* ---- Links ---- */
+a:visited { color: #609; }
+a:hover { color: #007dd9; }

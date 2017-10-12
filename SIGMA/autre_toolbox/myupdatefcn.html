@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot -->
+<html class="js wf-futurapt-n5-active wf-futurapt-n4-active wf-museoslab-n7-active wf-futurapt-i5-active wf-futurapt-n7-active wf-futurapt-i7-active wf-futurapt-i4-active wf-automate-n7-active wf-minionprosubhead-n4-active wf-active"><head class="at-element-marker"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Displaying information about the data set by clicking on its plot  - 
+MATLAB Answers - MATLAB Central</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot">
+<!-- BEGIN Adobe DTM -->
+<script type="text/javascript" async="" src="./myupdatefcn_files/ahy.js.téléchargement"></script><script src="./myupdatefcn_files/aquant.js.téléchargement" async="" type="text/javascript"></script><script src="./myupdatefcn_files/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js.téléchargement"></script><script src="./myupdatefcn_files/mbox-contents-95c6a4d9c82a8d20476522984666120b54192e9b.js.téléchargement"></script><style id="at-mbox-default-style">.mboxDefault {visibility:hidden;}</style><style>.at-element-marker {visibility:visible;}</style>
+<!-- END Adobe DTM -->
+<link href="./myupdatefcn_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="./myupdatefcn_files/site6.css" rel="stylesheet" type="text/css">
+<link href="./myupdatefcn_files/site6_lg.css" rel="stylesheet" media="screen and (min-width: 1200px)">
+<link href="./myupdatefcn_files/site6_md.css" rel="stylesheet" media="screen and (min-width: 992px) and (max-width: 1199px)">
+<link href="./myupdatefcn_files/site6_sm+xs.css" rel="stylesheet" media="screen and (max-width: 991px)">
+<link href="./myupdatefcn_files/site6_sm.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)">
+<link href="./myupdatefcn_files/site6_xs.css" rel="stylesheet" media="screen and (max-width: 767px)">
+<!--[if IE 8]>
+<link href="/includes_content/responsive/css/site6_ie8.css" rel="stylesheet" type="text/css">
+<script src="/includes_content/responsive/scripts/bootstrap/html5shiv-printshiv.js"></script>
+<script src="/includes_content/responsive/scripts/bootstrap/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<link href="/includes_content/responsive/css/site6_ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<link href="./myupdatefcn_files/site6_print.css" rel="stylesheet" type="text/css" media="print">
+<link rel="stylesheet" href="./myupdatefcn_files/mlc.css" type="text/css">
+<!--[if IE 8]>
+<link href="/includes_content/responsive/css/templates/mlc_ie8.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 9]>
+<link href="/includes_content/responsive/css/templates/mlc_ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<link rel="stylesheet" href="./myupdatefcn_files/answers.css">
+<!--[if IE 8]>
+<link href="/includes_content/responsive/css/apps/answers/answers_ie8.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<!--[if IE 9]>
+<link href="/includes_content/responsive/css/apps/answers/answers_ie9.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<link href="./myupdatefcn_files/site6_fr.css" rel="stylesheet" type="text/css">
+<script src="./myupdatefcn_files/jquery-latest.js.téléchargement"></script>
+<script src="./myupdatefcn_files/jquery.mobile.custom.min.js.téléchargement"></script>
+<script src="./myupdatefcn_files/bootstrap.min.js.téléchargement"></script>
+<script src="./myupdatefcn_files/global.js.téléchargement"></script>
+<script src="./myupdatefcn_files/anchor.js.téléchargement"></script>
+<script src="./myupdatefcn_files/xvy5baa.js.téléchargement"></script>
+<style type="text/css">.tk-museo-slab{font-family:"museo-slab",serif;}.tk-futura-pt{font-family:"futura-pt","Arial","Helvetica",sans-serif;}.tk-automate{font-family:"automate",sans-serif;}.tk-minion-pro-subhead{font-family:"minion-pro-subhead",serif;}</style><style type="text/css">@font-face{font-family:museo-slab;src:url(//fonts.mathworks.com/k/0e548aec395bd99926a27577e842e818def6ba83-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/0e548aec395bd99926a27577e842e818def6ba83-d.woff) format("woff"),url(//fonts.mathworks.com/k/0e548aec395bd99926a27577e842e818def6ba83-a.otf) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:futura-pt;src:url(//fonts.mathworks.com/k/87868ea7533b245fa343d5fd2e370ee0daee1db8-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/87868ea7533b245fa343d5fd2e370ee0daee1db8-d.woff) format("woff"),url(//fonts.mathworks.com/k/87868ea7533b245fa343d5fd2e370ee0daee1db8-a.otf) format("opentype");font-weight:500;font-style:normal;}@font-face{font-family:futura-pt;src:url(//fonts.mathworks.com/k/fa63f4ee95571fac0c3fde550489d0874f44e7d1-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/fa63f4ee95571fac0c3fde550489d0874f44e7d1-d.woff) format("woff"),url(//fonts.mathworks.com/k/fa63f4ee95571fac0c3fde550489d0874f44e7d1-a.otf) format("opentype");font-weight:500;font-style:italic;}@font-face{font-family:futura-pt;src:url(//fonts.mathworks.com/k/78f589bb61056c7dc2c42601e2fd59aa96941141-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/78f589bb61056c7dc2c42601e2fd59aa96941141-d.woff) format("woff"),url(//fonts.mathworks.com/k/78f589bb61056c7dc2c42601e2fd59aa96941141-a.otf) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:futura-pt;src:url(//fonts.mathworks.com/k/599bfc6908295758da16f495738fa5c76ccf9542-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/599bfc6908295758da16f495738fa5c76ccf9542-d.woff) format("woff"),url(//fonts.mathworks.com/k/599bfc6908295758da16f495738fa5c76ccf9542-a.otf) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:futura-pt;src:url(//fonts.mathworks.com/k/0ffa5e8c8eb076cc21ede9987250dfa4f2af4438-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/0ffa5e8c8eb076cc21ede9987250dfa4f2af4438-d.woff) format("woff"),url(//fonts.mathworks.com/k/0ffa5e8c8eb076cc21ede9987250dfa4f2af4438-a.otf) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:futura-pt;src:url(//fonts.mathworks.com/k/3f4899217323502feaae94c179311206f731a52e-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/3f4899217323502feaae94c179311206f731a52e-d.woff) format("woff"),url(//fonts.mathworks.com/k/3f4899217323502feaae94c179311206f731a52e-a.otf) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:automate;src:url(//fonts.mathworks.com/k/d4415a0418b08bbbf46e20588c2761ef9bd0aa79-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/d4415a0418b08bbbf46e20588c2761ef9bd0aa79-d.woff) format("woff"),url(//fonts.mathworks.com/k/d4415a0418b08bbbf46e20588c2761ef9bd0aa79-a.otf) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:minion-pro-subhead;src:url(//fonts.mathworks.com/k/d4d1694195e6776198a56670eb3252a367c04b04-l.woff2) format("woff2"),url(//fonts.mathworks.com/k/d4d1694195e6776198a56670eb3252a367c04b04-d.woff) format("woff"),url(//fonts.mathworks.com/k/d4d1694195e6776198a56670eb3252a367c04b04-a.otf) format("opentype");font-weight:400;font-style:normal;}</style><script>try{Typekit.load();}catch(e){}</script>
+  <meta name="description" content="Displaying information about the data set by... Learn more about plot, plotting, selecting data, gui, figure, multiple plots, datacursormode ">
+
+
+<meta content="You may have unsaved changes to a question, answer, or comment." name="confirm-close">
+<meta content="authenticity_token" name="csrf-param">
+<meta content="MrcFFYGTwnSOQDXr8VGLu6Y6Gpb4xrMsrdDmEu/Dw6U=" name="csrf-token">
+
+
+<link href="./myupdatefcn_files/application.css" media="screen" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript">
+  // CSS hook -- add class="js" to the <html> element
+  document.documentElement.className = document.documentElement.className === '' ? 'js' : document.documentElement.className + ' js';
+</script>
+
+<!-- jquery.min is only precompiled in development env, used for local VMs. g1567517 -->
+
+<script src="./myupdatefcn_files/application.js.téléchargement" type="text/javascript"></script>
+  <script src="./myupdatefcn_files/antlr3-all.min.js.téléchargement" type="text/javascript"></script>
+  <script src="./myupdatefcn_files/jquery.iframe-transport.js.téléchargement" type="text/javascript"></script>
+  <script src="./myupdatefcn_files/jquery.fileupload.js.téléchargement" type="text/javascript"></script>
+  <script src="./myupdatefcn_files/jquery.placeholder.js.téléchargement" type="text/javascript"></script>
+  <script src="./myupdatefcn_files/matlabmarkup.combined.js.téléchargement" type="text/javascript"></script>
+
+
+<link href="./myupdatefcn_files/application(1).css" media="all" rel="stylesheet" type="text/css">
+<link href="./myupdatefcn_files/mw_font.css" media="all" rel="stylesheet" type="text/css">
+<script src="./myupdatefcn_files/application.js(1).téléchargement" type="text/javascript"></script>
+<link href="./myupdatefcn_files/mlc6.css" rel="stylesheet" type="text/css">
+
+
+
+<script type="text/javascript" src="./myupdatefcn_files/jquery.cookie.js.téléchargement"></script>
+<script type="text/javascript">
+(function() {
+// Check if cookies are enabled
+function cookiesEnabled() {
+return $.cookie('check', 'valid', { expires: 1 }) && $.cookie('check') == 'valid';
+}
+// Set the language of the domain and redirect to the domain
+function setDomainLanguage(language) {
+if($.cookie("lang") != null) {
+$.cookie("lang", null, { path: '/', domain: 'ch.mathworks.com'});
+}
+$.cookie("lang", 'lang=' + language, {path: '/', expires: 365, domain: 'ch.mathworks.com'});
+}
+// do not display the domain selector if querystring is not present
+// or if query string has nocookie value
+// or if cookies are disabled
+var displayDomainSelector = true;
+function detectDomain() {
+var queries = {};
+$.each(document.location.search.substr(1).split('&'), function(c,q){
+if(q != undefined && q != "") {
+var i = q.split('=');
+if(i[1] != undefined) {
+queries[i[0].toString()] = i[1].toString();
+}
+}
+});
+var requested_domain = (queries['requestedDomain'] != undefined) ? queries['requestedDomain'] : "";
+var nocookie = (queries['nocookie'] != undefined) ? queries['nocookie'] : "";
+var client = (queries['client'] != undefined) ? queries['client'] : "";
+if(requested_domain == "" || nocookie == "true" || !cookiesEnabled() || client == "addons" || window.overrideDomainSelector) {
+displayDomainSelector = false;
+}
+}
+detectDomain();
+function extractDomain(url) {
+var domain;
+//find & remove protocol (http, ftp, etc.) and get domain
+if (url.indexOf("://") > -1) {
+domain = url.split('/')[2];
+} else {
+domain = url.split('/')[0];
+}
+//find & remove port number
+domain = domain.split(':')[0];
+return domain;
+}
+function getDomainContent(returnContent) {
+// Get the location information from the marketing site
+$.ajax({
+url : "/includes_content/domainSelect/location.html",
+type : "get",
+async: false,
+success : function(data) {
+$("#location_content").html(data);
+var button_link = $("#button_link").text();
+var current_location = $("#current_location").text();
+var location_key = $("#location_key").text();
+//Set the location in the text and button
+$(".text_location").text(current_location);
+$("#domain_select_button").text("Select " + current_location);
+// if the current location is different from the browser location, update the button functionality
+var browser_domain = extractDomain(window.location.href);
+if(button_link.indexOf(browser_domain) == -1) {
+// Get the current page link from the links within the selector
+new_button_link = $("." + location_key).attr("href");
+$("#domain_select_button").attr("href",new_button_link);
+$("#domain_select_button").removeAttr("data-dismiss");
+}
+}
+});
+if(returnContent) {
+return $('#country-unselected').html();
+}
+}
+$(document).ready(function () {
+//setLocation();
+// determine if links need to be rewritten
+if ( $( "#country-unselected li a" ).length ) {
+$("#country-unselected li a").each(function() {
+var link_url = $(this).attr("href").replace(/%26requestedDomain(%3D[^%26|&]*)?|requestedDomain(%3D[^%26|&]*)?(%26)?/, "");
+$(this).attr("href", link_url);
+});
+}
+if ( $( "li.headernav_login > a" ).length ) {
+var login_url = $("li.headernav_login > a").attr("href").replace(/%26requestedDomain(%3D[^%26|&]*)?|requestedDomain(%3D[^%26|&]*)?(%26)?/, "");
+$("li.headernav_login > a").attr("href", login_url);
+}
+if ( $( "li.mwa-nav_logout > a" ).length ) {
+var login_url = $("li.mwa-nav_logout > a").attr("href").replace(/%26requestedDomain(%3D[^%26|&]*)?|requestedDomain(%3D[^%26|&]*)?(%26)?/, "");
+$("li.mwa-nav_logout > a").attr("href", login_url);
+}
+if ( $( ".mwa-nav li a" ).length ) {
+$(".mwa-nav li a").each(function() {
+var link_url = $(this).attr("href").replace(/%26requestedDomain(%3D[^%26|&]*)?|requestedDomain(%3D[^%26|&]*)?(%26)?/, "");
+$(this).attr("href", link_url);
+});
+}
+$('body').on('click','.footernav_country a',function(){
+getDomainContent(false);
+});
+// set the click function for Switzerland/English link
+$('body').on('click','#swiss_english',function(){
+setDomainLanguage('en');
+});
+// set the click function for Switzerland/French link
+$('body').on('click','#swiss_french',function(){
+setDomainLanguage('fr');
+});
+// set the click function for the Switzerland/German link
+$('body').on('click','#swiss_german',function(){
+setDomainLanguage('de');
+});
+});
+// onload functionality for the selector
+$(document).ready(function () {
+if(displayDomainSelector) {
+getDomainContent(false);
+$('#country-unselected').modal('show');
+}
+});
+})(jQuery);
+</script>
+<script type="text/javascript">
+/*T&T Metadata v3 ==>Response Plugin*/
+window.ttMETA=(typeof(window.ttMETA)!="undefined")?window.ttMETA:[];window.ttMETA.push({"CampaignName":"","CampaignId":"","RecipeName":"","RecipeId":"","OfferId":"","OfferName":"","MboxName":"target-global-mbox"});
+</script><script type="text/javascript">
+var test_name= "";
+var tntRecipeName= "";
+</script><script src="./myupdatefcn_files/satellite-5480c4083639370018670600.js.téléchargement"></script><script src="./myupdatefcn_files/s-code-contents-73da148cb454c4f6e395aa8df704854c99540662.js.téléchargement"></script><style type="text/css" id="ki-bkg-bg4"></style><style type="text/css" id="ki-bkg-b26"></style></head>
+  
+<body id="responsive_b" class="mlc" style="">
+
+  <!-- Mobile TopNav: Start -->
+<div class="header visible-xs visible-sm" id="header_mobile" translate="no" style="">
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse" data-target="#topnav_collapse">
+<span class="sr-only">Toggle Main Navigation</span>
+<span class="icon-menu"></span>
+</button>
+<a href="https://fr.mathworks.com/?s_tid=gn_logo" class="svg_link navbar-brand">
+<img src="./myupdatefcn_files/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks">
+</a>
+</div>
+</div>
+</div>
+<div class="row visible-xs visible-sm">
+<div class="col-xs-12">
+<div class="navbar-collapse collapse" id="topnav_collapse">
+<ul class="nav navbar-nav" id="topnav">
+<li class="headernav_login dropdown">
+    <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#" class="dropdown-toggle" data-toggle="dropdown">
+      takfarinas medani <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu" id="mwa-nav">
+      <li class="mwa-nav_account">
+        <a href="https://fr.mathworks.com/mwaccount/" id="edit_profile_link">Mon Compte</a>
+      </li>
+      <li class="mwa-nav_associate">
+        <a href="https://fr.mathworks.com/licensecenter/workflows/associate_license?s_tid=gn_aslc" id="associate_license_link">Licences associées</a>
+      </li>
+      <li class="mwa-nav_account">
+        <a href="https://fr.mathworks.com/matlabcentral/profile/authors/my_profile">My Community Profile</a>
+      </li>
+      <li class="mwa-nav_logout">
+        <a href="https://fr.mathworks.com/login/logout?uri=https%3A%2F%2Ffr.mathworks.com%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot">Se déconnecter</a>
+      </li>
+  	</ul>
+</li>
+
+<li class="topnav_products "><a href="https://fr.mathworks.com/products.html?s_tid=gn_ps">Produits</a></li>
+<li class="topnav_solutions "><a href="https://fr.mathworks.com/solutions.html?s_tid=gn_sol">Solutions</a></li>
+<li class="topnav_academia "><a href="https://fr.mathworks.com/academia.html?s_tid=gn_acad">Le Monde Universitaire</a></li>
+<li class="topnav_support "><a href="https://fr.mathworks.com/support/?s_tid=gn_supp">Support</a></li>
+<li class="topnav_community "><a href="https://fr.mathworks.com/matlabcentral/?s_tid=gn_mlc">Communauté</a></li>
+<li class="topnav_events "><a href="https://fr.mathworks.com/company/events.html?s_tid=gn_ev">Evénements</a></li>
+<li class="headernav_contact"><a href="https://fr.mathworks.com/company/aboutus/contact_us.html?s_tid=gn_cntus">Contacts</a></li>
+<li class="headernav_store"><a href="https://fr.mathworks.com/store?s_cid=store_top_nav&amp;s_tid=gn_store">Comment acheter</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<!-- Mobile TopNav: End -->
+<!-- Desktop TopNav: Start -->
+<div class="header hidden-xs hidden-sm" id="header_desktop" translate="no">
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="collapse navbar-collapse" id="headernav_collapse">
+<ul class="nav navbar-nav navbar-right" id="headernav">
+<li class="headernav_contact"><a href="https://fr.mathworks.com/company/aboutus/contact_us.html?s_tid=gn_cntus">Contacts</a></li>
+<li class="headernav_store"><a href="https://fr.mathworks.com/store?s_cid=store_top_nav&amp;s_tid=gn_store">Comment acheter</a></li>
+<li class="headernav_login dropdown">
+    <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#" class="dropdown-toggle" data-toggle="dropdown">
+      takfarinas medani <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu" id="mwa-nav">
+      <li class="mwa-nav_account">
+        <a href="https://fr.mathworks.com/mwaccount/" id="edit_profile_link">Mon Compte</a>
+      </li>
+      <li class="mwa-nav_associate">
+        <a href="https://fr.mathworks.com/licensecenter/workflows/associate_license?s_tid=gn_aslc" id="associate_license_link">Licences associées</a>
+      </li>
+      <li class="mwa-nav_account">
+        <a href="https://fr.mathworks.com/matlabcentral/profile/authors/my_profile">My Community Profile</a>
+      </li>
+      <li class="mwa-nav_logout">
+        <a href="https://fr.mathworks.com/login/logout?uri=https%3A%2F%2Ffr.mathworks.com%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot">Se déconnecter</a>
+      </li>
+  	</ul>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="navbar-header">
+<div class="logo_container hidden-xs hidden-sm">
+<a href="https://fr.mathworks.com/?s_tid=gn_logo" class="svg_link pull-left">
+<img src="./myupdatefcn_files/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks">
+</a>
+</div>
+<div class="navbar-collapse collapse hidden-xs hidden-sm">
+<ul class="nav navbar-nav" id="topnav">
+<li class="topnav_products "><a href="https://fr.mathworks.com/products.html?s_tid=gn_ps">Produits</a></li>
+<li class="topnav_solutions "><a href="https://fr.mathworks.com/solutions.html?s_tid=gn_sol">Solutions</a></li>
+<li class="topnav_academia "><a href="https://fr.mathworks.com/academia.html?s_tid=gn_acad">Le Monde Universitaire</a></li>
+<li class="topnav_support "><a href="https://fr.mathworks.com/support/?s_tid=gn_supp">Support</a></li>
+<li class="topnav_community "><a href="https://fr.mathworks.com/matlabcentral/?s_tid=gn_mlc">Communauté</a></li>
+<li class="topnav_events "><a href="https://fr.mathworks.com/company/events.html?s_tid=gn_ev">Evénements</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<!-- Desktop TopNav: End -->
+<!-- Conjoined Header: Start -->
+<div class="sticky_header_container includes_subnav affix">
+<!-- Section Header: Start -->
+<div class="section_header level_3">
+<div class="container">
+<div class="row" id="mobile_search_row">
+<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7" id="mobile_search">
+<div class="search_nested_content_container">
+<div id="search_scope_answers" class="collapse in">
+<form id="answerssearch_form" name="answerssearch_form" method="get" data-language="en" action="https://fr.mathworks.com/matlabcentral/answers/">
+<div class="input-group tokenized_search_field">
+<label class="sr-only">Search Answers</label>
+<input type="text" class="form-control conjoined_search" autocomplete="off" name="term" placeholder="Search Answers" id="answerssearch" value="
+">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">Answers</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<!-- <li data-toggle="collapse" data-target="#search_scope_answers" class="answers_search_scope_trigger"><a href="#">Answers</a></li> -->
+<li data-toggle="collapse" data-target="#search_scope_support" class="answers_search_scope_trigger"><a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#">Support</a></li>
+<li data-toggle="collapse" data-target="#search_scope_site" class="answers_search_scope_trigger"><a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#">MathWorks</a></li>
+</ul>
+<script>
+$(".answers_search_scope_trigger").click(function() {
+$("#search_scope_answers").removeClass("in");
+$("#supportsearch").val($("#answerssearch").val());
+$("#query").val($("#answerssearch").val());
+});
+</script>
+<button type="submit" id="submitsearch" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+</div>
+</div>
+</form>
+</div>
+<div id="search_scope_support" class="collapse">
+<form id="supportsearch_form" name="supportsearch_form" method="get" data-language="en" action="https://fr.mathworks.com/support/search_results.html">
+<div class="input-group tokenized_search_field">
+<label class="sr-only">Search Support</label>
+<input type="text" class="form-control conjoined_search" autocomplete="off" name="q" placeholder="Search Support" id="supportsearch">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">Support</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<li data-toggle="collapse" data-target="#search_scope_answers" class="support_search_scope_trigger"><a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#">Answers</a></li>
+<!-- <li data-toggle="collapse" data-target="#search_scope_support" class="support_search_scope_trigger"><a href="#">Support</a></li> -->
+<li data-toggle="collapse" data-target="#search_scope_site" class="support_search_scope_trigger"><a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#">MathWorks</a></li>
+</ul>
+<script>
+$(".support_search_scope_trigger").click(function() {
+$("#search_scope_support").removeClass("in");
+$("#answerssearch").val($("#supportsearch").val());
+$("#query").val($("#supportsearch").val());
+});
+</script>
+<button type="submit" name="submitsearch" id="submitsearch" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+</div>
+</div>
+</form>
+</div>
+<div id="search_scope_site" class="collapse">
+<form name="search" id="site_search" class="site_search" action="https://fr.mathworks.com/search/site_search.html" method="get">
+<div class="input-group">
+<label class="sr-only">Search MathWorks.com</label>
+<input type="hidden" name="c[]" value="entire_site">
+<input type="text" name="q" id="query" class="form-control conjoined_search" placeholder="Search MathWorks.com" autocomplete="off" \="">
+<div class="input-group-btn">
+<button type="button" class="btn btn_search_adjacent dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span><span class="search_scope_label">MathWorks</span></button>
+<ul class="dropdown-menu list-unstyled dropdown-menu-right" role="menu">
+<li data-toggle="collapse" data-target="#search_scope_answers" class="site_search_scope_trigger"><a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#">Answers</a></li>
+<li data-toggle="collapse" data-target="#search_scope_support" class="site_search_scope_trigger"><a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#">Support</a></li>
+<!--<li data-toggle="collapse" data-target="#search_scope_site" class="site_search_scope_trigger"><a href="#">MathWorks</a></li>-->
+</ul>
+<script>
+$(".site_search_scope_trigger").click(function() {
+$("#search_scope_site").removeClass("in");
+$("#answerssearch").val($("#query").val());
+$("#supportsearch").val($("#query").val());
+});
+</script>
+<button type="submit" id="searchbutton" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+</div>
+<div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5 has_horizontal_local_nav" id="section_header_title">
+<div class="section_header_content">
+<div class="section_header_title add_cursor_pointer">
+<p class="h1">MATLAB Answers<sup>™</sup></p>
+</div>
+<button type="button" class="navbar-toggle collapsed subnav visible-xs visible-sm" data-toggle="collapse" data-target=".mobile_subnav_content"> <span class="icon-arrow-down icon_24"></span> </button>
+</div>
+</div>
+<div class="visible-xs" id="search_actuator">
+<button class="btn icon-search btn_search pull-right icon_16" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+</div>
+</div>
+<script>
+$(".section_header_title").click(function(){
+$(window.location).attr('href', '/matlabcentral/answers/index');
+});
+</script>
+<!-- Section Header: End -->
+<!-- Mobile Local Nav: Start -->
+<div class="row visible-xs visible-sm" id="mobile_subnav">
+<div class="col-xs-12">
+<div class="navbar-collapse collapse mobile_subnav_content">
+<ul class="nav navbar-nav subnav">
+<li class="dropdown">
+  <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MATLAB Central<span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li class="topnav_about_mlc"><a href="https://fr.mathworks.com/matlabcentral/?s_tid=gn_mlc_dpdn">Community Home</a></li>
+    <li class="topnav_answers"><a href="https://fr.mathworks.com/matlabcentral/answers/index/?s_tid=gn_mlc_an">MATLAB Answers</a></li>
+    <li class="topnav_fileexchange"><a href="https://fr.mathworks.com/matlabcentral/fileexchange/?s_tid=gn_mlc_fx">File Exchange</a></li>
+    <li class="topnav_cody"><a href="https://fr.mathworks.com/matlabcentral/cody/?s_tid=gn_mlc_cody">Cody</a></li>
+    <li class="topnav_blogs"><a href="http://blogs.mathworks.com/?s_tid=gn_mlc_blg">Blogs</a></li>
+    <li class="topnav_newsreader"><a href="https://fr.mathworks.com/matlabcentral/newsreader/?s_tid=gn_mlc_ng">Newsreader</a></li>
+    <li class="topnav_linkexchange"><a href="https://fr.mathworks.com/matlabcentral/linkexchange/?s_tid=gn_mlc_lx">Link Exchange</a></li>
+    <li class="topnav_thingspeak"><a href="https://fr.mathworks.com/products/thingspeak.html?s_tid=gn_mlc_TS">ThingSpeak</a></li>
+  </ul>
+</li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/index?s_tid=al" id="landing_link">Home</a></li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/questions/new/?s_tid=gn_mlc_ans_ask" id="ask_question_link" rel="nofollow">Ask</a></li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=status%3Aunanswered&amp;s_tid=gn_mlc_ans_ans" id="answer_question_link" rel="nofollow">Answer</a></li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/?s_tid=gn_mlc_ans_ans" id="questions_link" rel="nofollow">Browse</a></li>
+<li>
+	<a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot" data-toggle="dropdown" data-target="#" id="more_link">More<span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="https://fr.mathworks.com/matlabcentral/answers/contributors/?s_tid=gn_mlc_ans_cnt" id="contributors_link">Contributors</a></li>
+		<li><a href="https://fr.mathworks.com/matlabcentral/answers/activities?s_tid=gn_mlc_ans_rec" id="activity_link" rel="nofollow">Recent Activity</a></li>
+		<li><a href="https://fr.mathworks.com/matlabcentral/answers/flagged?s_tid=gn_mlc_ans_FC" id="flags_link" rel="nofollow">Flagged Content</a></li>
+		<li><a href="https://fr.mathworks.com/matlabcentral/answers/manage-spam" id="spam_link" rel="nofollow">Flagged as Spam</a></li>
+	</ul>
+</li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/help?s_tid=gn_mlc_ans_hlp" id="help_link" rel="nofollow">Help</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<!-- Mobile Local Nav: End -->
+</div>
+</div>
+<!-- Horo Nav: Start -->
+<div class="horizontal_nav hidden-xs hidden-sm">
+<div class="horizontal_nav_container">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-lg-9 hidden-xs hidden-sm">
+<nav class="navbar navbar-default" role="navigation" id="subnav">
+<div class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+  <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MATLAB Central<span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li class="topnav_about_mlc"><a href="https://fr.mathworks.com/matlabcentral/?s_tid=gn_mlc_dpdn">Community Home</a></li>
+    <li class="topnav_answers"><a href="https://fr.mathworks.com/matlabcentral/answers/index/?s_tid=gn_mlc_an">MATLAB Answers</a></li>
+    <li class="topnav_fileexchange"><a href="https://fr.mathworks.com/matlabcentral/fileexchange/?s_tid=gn_mlc_fx">File Exchange</a></li>
+    <li class="topnav_cody"><a href="https://fr.mathworks.com/matlabcentral/cody/?s_tid=gn_mlc_cody">Cody</a></li>
+    <li class="topnav_blogs"><a href="http://blogs.mathworks.com/?s_tid=gn_mlc_blg">Blogs</a></li>
+    <li class="topnav_newsreader"><a href="https://fr.mathworks.com/matlabcentral/newsreader/?s_tid=gn_mlc_ng">Newsreader</a></li>
+    <li class="topnav_linkexchange"><a href="https://fr.mathworks.com/matlabcentral/linkexchange/?s_tid=gn_mlc_lx">Link Exchange</a></li>
+    <li class="topnav_thingspeak"><a href="https://fr.mathworks.com/products/thingspeak.html?s_tid=gn_mlc_TS">ThingSpeak</a></li>
+  </ul>
+</li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/index?s_tid=al" id="landing_link">Home</a></li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/questions/new/?s_tid=gn_mlc_ans_ask" id="ask_question_link" rel="nofollow">Ask</a></li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=status%3Aunanswered&amp;s_tid=gn_mlc_ans_ans" id="answer_question_link" rel="nofollow">Answer</a></li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/?s_tid=gn_mlc_ans_ans" id="questions_link" rel="nofollow">Browse</a></li>
+<li>
+	<a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot" data-toggle="dropdown" data-target="#" id="more_link">More<span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="https://fr.mathworks.com/matlabcentral/answers/contributors/?s_tid=gn_mlc_ans_cnt" id="contributors_link">Contributors</a></li>
+		<li><a href="https://fr.mathworks.com/matlabcentral/answers/activities?s_tid=gn_mlc_ans_rec" id="activity_link" rel="nofollow">Recent Activity</a></li>
+		<li><a href="https://fr.mathworks.com/matlabcentral/answers/flagged?s_tid=gn_mlc_ans_FC" id="flags_link" rel="nofollow">Flagged Content</a></li>
+		<li><a href="https://fr.mathworks.com/matlabcentral/answers/manage-spam" id="spam_link" rel="nofollow">Flagged as Spam</a></li>
+	</ul>
+</li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/help?s_tid=gn_mlc_ans_hlp" id="help_link" rel="nofollow">Help</a></li>
+
+</ul>
+</div>
+</nav>
+</div>
+<div class="col-md-4 col-lg-3 hidden-xs hidden-sm">
+<div class="cta_box">
+<ul class="list-inline">
+<li class="cta_item cta_item_general"><a href="https://fr.mathworks.com/programs/trials/trial_request.html?eventid=56763&amp;prodcode=ML&amp;s_iid=mlcans_trial_mlc_cta1" class="icon-download">Version d’évaluation</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Horo Nav: End -->
+</div>
+<!-- Conjoined Header: End -->
+    
+
+    
+
+  <div class="content_container">
+    <div class="container">        
+      <div class="row">
+        <div class="col-xs-12">
+            
+
+
+
+
+
+
+
+     
+    
+
+
+
+		
+
+
+
+
+
+<div class="row">
+	<div class="col-xs-12 col-sm-9">
+		<div class="panel panel-default panel_color_default panel_color_fill">
+		 	<div class="panel-body">
+        <div class="row small">
+					<div class="col-xs-12 col-sm-12 col-md-2">
+							<div class="col-xs-4 col-sm-4 col-md-12">
+								<a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris" class="author_inline" data-cp-link-id="1"><img alt="kris" class="avatar-img" src="./myupdatefcn_files/profilepic_default.gif"></a>
+<div class="profile mlc_author_popover" data-cp-popup-id="1" vocab="http://schema.org/" typeof="Person">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="profile__name" property="name"><a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris">kris <span>(view profile)</span></a></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="profile__image">
+        <a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris">
+            <img src="./myupdatefcn_files/profilepic_default.gif">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-8   profile__stats" typeof="CreativeWork">
+      
+  <ul class="contributor-page-popup">
+    <li property="question">
+      <span class="icon-contactus" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=asked_by_id%3A23530"><span property="question_count">1 question asked</span> </a>
+    </li>
+    <li property="answer">
+      <span class="icon-answers" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=answered_by_id%3A23530"><span property="answer_count">0 answers</span> </a>
+    </li>
+    <li property="answers_accepted">
+      <span class="icon-check" aria-hidden="true"></span>
+      <span property="answers_accepted_count">0 accepted answers</span>
+    </li>
+    <li property="answers_reputation">
+      <span class="icon-rating" aria-hidden="true"></span>
+      <span property="answers_accepted_count">reputation: 0</span>
+    </li>
+  </ul>
+
+    </div>
+
+  </div>
+</div>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12 tools-no-paddings">
+								<div class="question-tools">
+									<div class="col-xs-12 tools_spacer"> </div>
+									<div id="votes_question_11668" class="vote col-xs-12 col-sm-3 col-md-12">
+										<form accept-charset="UTF-8" action="https://fr.mathworks.com/matlabcentral/answers/votes" class="vote-form show-modal-on-error" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="MrcFFYGTwnSOQDXr8VGLu6Y6Gpb4xrMsrdDmEu/Dw6U="></div>
+											<input name="vote[votable_type]" type="hidden" value="Question"><input name="vote[votable_id]" type="hidden" value="11668">
+											<button class="off btn btn-link" title="Add your vote" type="submit"><span class="icon-like vote_icon"></span><span class="vote_prompt">Vote</span></button><div class="vote_count"><span class="pipe"></span>0</div>
+</form>									</div>
+									<div class="col-xs-12 visible-xs tools_spacer"> </div>
+
+									<div class="flag col-xs-3 col-sm-2 col-md-12" id="toggle_flag_question_11668">
+  <a href="https://fr.mathworks.com/matlabcentral/answers/flagged/new?flaggable_id=11668&amp;flaggable_type=Question" data-toggle="#flag_question_11668" rel="nofollow"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span>Flag</a>
+
+</div>
+<form accept-charset="UTF-8" action="https://fr.mathworks.com/matlabcentral/answers/flagged" class="flagging-form show-modal-on-error hidden small" data-dialog="true" data-remote="true" id="flag_question_11668" method="post" title="Flag with care"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="MrcFFYGTwnSOQDXr8VGLu6Y6Gpb4xrMsrdDmEu/Dw6U="></div>
+  <input name="flagging[flaggable_id]" type="hidden" value="11668">
+  <input name="flagging[flaggable_type]" type="hidden" value="Question">
+
+    <p>A flag is a request to an editor to review and potentially close or delete content on MATLAB Answers. Include the reason for your flag below.</p>
+    <div class="radio">
+      <input checked="checked" id="flag_id_1" name="flag_id" type="radio" value="1">
+      <label for="flag_question_11668_flag_1">Not appropriate for MATLAB Answers</label>
+      <div class="hover">
+        <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot"><span class="icon-mw-help icon_16"></span></a>
+        <div class="visually-hidden"><p>Inappropriate flags an invalid question. These questions lack any of the following:</p><ul><li>Detail for ensuring a proper response</li><li>Sufficient work or thought on the part of the requester (do-it-for-me request)</li><li>Usefulness to the community</li></ul></div>
+      </div>
+    </div>
+    <div class="radio">
+      <input checked="checked" id="flag_id_2" name="flag_id" type="radio" value="2">
+      <label for="flag_question_11668_flag_2">Spam</label>
+      <div class="hover">
+        <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot"><span class="icon-mw-help icon_16"></span></a>
+        <div class="visually-hidden"><p>This question is spam.</p></div>
+      </div>
+    </div>
+    <div class="radio">
+      <input checked="checked" id="flag_id_3" name="flag_id" type="radio" value="3">
+      <label for="flag_question_11668_flag_3">Unclear</label>
+      <div class="hover">
+        <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot"><span class="icon-mw-help icon_16"></span></a>
+        <div class="visually-hidden"><p>Unclear flags a question requiring more information. These questions are illogical, lack detail, or may not be a question.</p><p>Unclear questions can be reopened within 10 days of closure. Thereafter, unclear questions become permanently deleted.</p></div>
+      </div>
+    </div>
+    <div>
+      <label for="flagging_message">Provide additional information about your flag below<span class="tip">Your message will be publicly visible.</span></label>
+      <textarea class="form-control" cols="40" id="flagging_message" name="flagging[message]" rows="20"></textarea>
+    </div>
+    <div class="submit">
+      <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot" class="btn btn_primary btn-sm" data-toggle="#flag_question_11668" rel="nofollow">Cancel</a>
+      <input class="btn btn_secondary btn-sm" data-disable-with="Saving…" type="submit" value="Submit">
+    </div>
+</form>
+
+
+
+
+									</div>
+							 	</div>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-10">
+								<div class="question" id="question_11668">
+								<div class="row">
+									<div class="col-sm-11 col-xs-11 col-md-11">
+										<h2 class="add_font_color_emphasize" id="title_question_11668">Displaying information about the data set by clicking on its plot</h2>
+									</div>
+								</div>
+                                <div class="row" style="position:relative">
+                                    <div class="col-xs-12 col-sm-12 col-md-8">
+                                        <div id="asked_question_11668" class="contribution">
+
+                                            Asked by <a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris" class="author_inline" data-cp-link-id="2">kris</a>
+<div class="profile mlc_author_popover" data-cp-popup-id="2" vocab="http://schema.org/" typeof="Person">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="profile__name" property="name"><a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris">kris <span>(view profile)</span></a></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="profile__image">
+        <a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris">
+            <img src="./myupdatefcn_files/profilepic_default.gif">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-8   profile__stats" typeof="CreativeWork">
+      
+  <ul class="contributor-page-popup">
+    <li property="question">
+      <span class="icon-contactus" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=asked_by_id%3A23530"><span property="question_count">1 question asked</span> </a>
+    </li>
+    <li property="answer">
+      <span class="icon-answers" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=answered_by_id%3A23530"><span property="answer_count">0 answers</span> </a>
+    </li>
+    <li property="answers_accepted">
+      <span class="icon-check" aria-hidden="true"></span>
+      <span property="answers_accepted_count">0 accepted answers</span>
+    </li>
+    <li property="answers_reputation">
+      <span class="icon-rating" aria-hidden="true"></span>
+      <span property="answers_accepted_count">reputation: 0</span>
+    </li>
+  </ul>
+
+    </div>
+
+  </div>
+</div> <span class="question-ask-date">on 15 Jul 2011</span>
+                                        </div>
+                                        
+                                        <div id="accepted_answer_question_11668" class="contribution">
+  <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#answer_15920" class="accepted-answer" rel="nofollow">Accepted Answer</a> by <a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov" class="author_inline" data-cp-link-id="3">Oleg Komarov</a>
+<div class="profile mlc_author_popover" data-cp-popup-id="3" vocab="http://schema.org/" typeof="Person">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="profile__name" property="name"><a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov">Oleg Komarov <span>(view profile)</span></a></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="profile__image">
+        <a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov">
+            <img src="./myupdatefcn_files/1886545.jpg">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-8   profile__stats" typeof="CreativeWork">
+      
+  <ul class="contributor-page-popup">
+    <li property="question">
+      <span class="icon-contactus" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=asked_by_id%3A169"><span property="question_count">37 questions asked</span> </a>
+    </li>
+    <li property="answer">
+      <span class="icon-answers" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=answered_by_id%3A169"><span property="answer_count">1,022 answers</span> </a>
+    </li>
+    <li property="answers_accepted">
+      <span class="icon-check" aria-hidden="true"></span>
+      <span property="answers_accepted_count">480 accepted answers</span>
+    </li>
+    <li property="answers_reputation">
+      <span class="icon-rating" aria-hidden="true"></span>
+      <span property="answers_accepted_count">reputation: 3,274</span>
+    </li>
+  </ul>
+
+    </div>
+
+  </div>
+</div> 
+</div>
+
+                                    </div>
+                                    
+<div id="views_md_question_11668" class="view-counts-desktop hidden-xs hidden-sm col-md-4">
+  <div class="contribution text-right">
+    16 views (last 30 days)
+  </div>
+</div>
+
+<div id="views_sm_question_11668" class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+  <div class="contribution">
+    16 views (last 30 days)
+  </div>
+</div>
+                                </div>
+
+                    
+
+
+                    
+
+                    <div id="body_question_11668" class="panel panel-default add_text_wrapping">
+											<div class="panel-body">
+                          <p>I have a plot of several graphs organized by color.  
+EX:</p><pre>    colors = jet(12);</pre><pre>    for i = 1:12</pre><pre>      plot(x(:,i),y(:,i),'.','color',colors(i,:))</pre><pre>    end</pre><p>It works well and with the legend, I can display what each plot correlates to: data set 1, data set 2, etc.</p><p>However, it would be much better if I could get this information by CLICKING on the data.  Such as when you click on a data point using "cursor" you can see the x and y values.</p><p>For example, when I click on one of the points, I would like it to say, "Data set 1:  X = 12, Y = 3" or however it would display this information.  I'm actually more interested in the data set information than the xy position.</p><p>Does anyone have any insight as to how to do this or if it's even possible?</p><p>Thank you!!!!</p>
+											</div>
+                    </div>
+
+
+                    <div class="panel panel-default panel_icon_16 comments" id="comments_question_11668" data-state="closed">
+	<div class="panel-body">
+		<h4><span class="icon-feedback icon_16"></span>&nbsp;&nbsp;<span class="comments-count">0 Comments</span></h4>
+
+
+		<div class="toggle-comments hidden"><span>Show</span><span class="hidden">Hide</span> <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#toggle-comments" class="hidden-comments-count">all comments</a></div>
+
+
+	        <p><a href="https://fr.mathworks.com/mwaccount/profiles/edit?uri=https%3A%2F%2Ffr.mathworks.com%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;t=community">Create a community profile</a> to comment.</p>
+	</div>
+</div>
+
+
+</div>                </div>
+					</div>
+        </div>
+    </div>
+
+
+<div class="row small">
+	<div class="col-xs-12 col-md-6">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-6">
+					<h2>
+						Tags
+					</h2>
+				</div>
+				<div class="col-sm-6">
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div id="tags_question_11668" class="answer-tag-list">
+				<ul class="list-unstyled list-inline"><li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=tag%3A%22plot%22" rel="nofollow">plot</a><span class="separator"></span></li><li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=tag%3A%22plotting%22" rel="nofollow">plotting</a><span class="separator"></span></li><li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=tag%3A%22selecting+data%22" rel="nofollow">selecting data</a><span class="separator"></span></li><li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=tag%3A%22gui%22" rel="nofollow">gui</a><span class="separator"></span></li><li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=tag%3A%22figure%22" rel="nofollow">figure</a><span class="separator"></span></li><li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=tag%3A%22multiple+plots%22" rel="nofollow">multiple plots</a><span class="separator"></span></li><li><a href="https://fr.mathworks.com/matlabcentral/answers/?term=tag%3A%22datacursormode%22" rel="nofollow">datacursormode</a></li></ul>
+
+				</div>
+			</div>
+    </div>
+	</div>
+
+
+	<div class="col-xs-12 col-md-6">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-6">
+					<h2>
+						Products
+					</h2>
+				</div>
+				<div class="col-sm-6">
+				</div>
+			 </div>
+		</div>
+		<div class="panel-body">
+			<div id="products_question_11668" class="product-list">
+				<p><em>No products are associated with this question.</em></p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+	<h2 class="add_font_color_emphasize" id="answer_count_question_11668"><span class="icon-answers"></span> 1 Answer</h2>
+</div>
+
+<div class="panel-body">
+	<div class="row small">
+		<div class="col-xs-12 col-sm-12 col-md-2">
+			<div class="col-xs-4 col-sm-4 col-md-12">
+				<a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov" class="author_inline" data-cp-link-id="4"><img alt="Oleg Komarov" class="avatar-img" src="./myupdatefcn_files/1886545.jpg"></a>
+<div class="profile mlc_author_popover" data-cp-popup-id="4" vocab="http://schema.org/" typeof="Person">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="profile__name" property="name"><a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov">Oleg Komarov <span>(view profile)</span></a></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="profile__image">
+        <a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov">
+            <img src="./myupdatefcn_files/1886545.jpg">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-8   profile__stats" typeof="CreativeWork">
+      
+  <ul class="contributor-page-popup">
+    <li property="question">
+      <span class="icon-contactus" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=asked_by_id%3A169"><span property="question_count">37 questions asked</span> </a>
+    </li>
+    <li property="answer">
+      <span class="icon-answers" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=answered_by_id%3A169"><span property="answer_count">1,022 answers</span> </a>
+    </li>
+    <li property="answers_accepted">
+      <span class="icon-check" aria-hidden="true"></span>
+      <span property="answers_accepted_count">480 accepted answers</span>
+    </li>
+    <li property="answers_reputation">
+      <span class="icon-rating" aria-hidden="true"></span>
+      <span property="answers_accepted_count">reputation: 3,274</span>
+    </li>
+  </ul>
+
+    </div>
+
+  </div>
+</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 tools-no-paddings">
+				<ul class="list-unstyled" id="tools_answer_15920">
+				<div class="col-xs-12 tools_spacer"> </div>
+<div id="votes_answer_15920" class="vote col-xs-6 col-sm-2 col-md-12">
+  <form accept-charset="UTF-8" action="https://fr.mathworks.com/matlabcentral/answers/votes" class="vote-form show-modal-on-error" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="MrcFFYGTwnSOQDXr8VGLu6Y6Gpb4xrMsrdDmEu/Dw6U="></div>
+    <input name="vote[votable_type]" type="hidden" value="Answer"><input name="vote[votable_id]" type="hidden" value="15920">
+    <button class="off btn btn-link" title="Add your vote" type="submit"><span class="icon-like vote_icon"></span><span class="vote_prompt">Vote</span></button><div class="vote_count"><span class="pipe"></span>1</div>
+</form></div>
+
+
+
+<div class="col-xs-12 visible-xs visible-sm tools_spacer"> </div>
+
+<div class="flag col-xs-3 col-sm-2 col-md-12" id="toggle_flag_answer_15920">
+  <a href="https://fr.mathworks.com/matlabcentral/answers/flagged/new?flaggable_id=15920&amp;flaggable_type=Answer" data-toggle="#flag_answer_15920" rel="nofollow"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span>Flag</a>
+
+</div>
+<form accept-charset="UTF-8" action="https://fr.mathworks.com/matlabcentral/answers/flagged" class="flagging-form show-modal-on-error hidden small" data-dialog="true" data-remote="true" id="flag_answer_15920" method="post" title="Flag with care"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="MrcFFYGTwnSOQDXr8VGLu6Y6Gpb4xrMsrdDmEu/Dw6U="></div>
+  <input name="flagging[flaggable_id]" type="hidden" value="15920">
+  <input name="flagging[flaggable_type]" type="hidden" value="Answer">
+
+    <div>
+      <label for="flag_answer_15920_message">Include the reason for your flag below: <span class="tip">Your message will be publicly visible.</span></label>
+      <textarea id="flag_answer_15920_message" name="flagging[message]" data-resize="true" class="form-control"></textarea>
+    </div>
+    <div class="submit">
+      <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot" class="btn btn_primary btn-sm" data-toggle="#flag_answer_15920" rel="nofollow">Cancel</a>
+      <input class="btn btn_secondary btn-sm" data-disable-with="Saving…" type="submit" value="Submit">
+
+    </div>
+</form>
+
+
+
+<div class="answer-link col-xs-3 col-sm-2 col-md-12">
+	<a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#answer_15920" data-toggle="#permalink_answer_15920" id="toggle_permalink_answer_15920" rel="nofollow" title="Direct link to this answer"><span class="icon-link"></span>Link</a>
+</div>
+<div data-dialog="compact" class="permalink-dialog hidden small" id="permalink_answer_15920">
+  <p><strong>Direct link to this answer:</strong></p>
+  <p class="link-wrapper"><a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#answer_15920" id="anchor_permalink_answer_15920">https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#answer_15920</a></p>
+  <div class="submit permalink_buttons">
+      <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot" class="btn btn_primary btn-sm" data-toggle="#permalink_answer_15920" rel="nofollow">Cancel</a>
+      <button type="button" class="btn btn_secondary btn-sm copy_permalink" id="copy_permalink_answer_15920">Copy to Clipboard</button>
+  </div>
+</div>
+
+				</ul>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-10 col-sm-10">
+		<div class="answer" id="answer_15920">
+			<div id="created_answer_15920" class="contribution">
+  Answer by <a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov" class="author_inline" data-cp-link-id="5">Oleg Komarov</a>
+<div class="profile mlc_author_popover" data-cp-popup-id="5" vocab="http://schema.org/" typeof="Person">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="profile__name" property="name"><a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov">Oleg Komarov <span>(view profile)</span></a></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="profile__image">
+        <a href="https://fr.mathworks.com/matlabcentral/profile/authors/1886545-oleg-komarov">
+            <img src="./myupdatefcn_files/1886545.jpg">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-8   profile__stats" typeof="CreativeWork">
+      
+  <ul class="contributor-page-popup">
+    <li property="question">
+      <span class="icon-contactus" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=asked_by_id%3A169"><span property="question_count">37 questions asked</span> </a>
+    </li>
+    <li property="answer">
+      <span class="icon-answers" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=answered_by_id%3A169"><span property="answer_count">1,022 answers</span> </a>
+    </li>
+    <li property="answers_accepted">
+      <span class="icon-check" aria-hidden="true"></span>
+      <span property="answers_accepted_count">480 accepted answers</span>
+    </li>
+    <li property="answers_reputation">
+      <span class="icon-rating" aria-hidden="true"></span>
+      <span property="answers_accepted_count">reputation: 3,274</span>
+    </li>
+  </ul>
+
+    </div>
+
+  </div>
+</div> <span class="answered-date">on 15 Jul 2011</span>
+</div>
+
+
+
+				<div class="accepted"><span class="icon-check icon_16"></span>&nbsp;<span>Accepted Answer</span></div>
+			<br>
+
+			
+
+
+			
+
+			<div id="body_answer_15920" class="panel panel-default add_text_wrapping">
+	<div class="panel-body">
+		<p>% Example figure with 3 datasets, assign <i>tag</i> property when plotting:</p><pre class="language-matlab">colors = jet(3);
+x = (1:100).';
+y = sin(x)*rand(1,3);
+plot(x,y(:,1),'.','color',colors(1,:),'tag',sprintf('dataset %d',1))
+hold on
+for s = 2:3
+    plot(x,y(:,s),'.','color',colors(s,:),'tag',sprintf('dataset %d',s))
+end
+</pre><p>% Then use datacursormode with user-defined <i>UpdateFcn</i></p><pre class="language-matlab">datacursormode on
+dcm = datacursormode(gcf);
+set(dcm,'UpdateFcn',@myupdatefcn)
+</pre><p>% Save this fcn somewhere on the path</p><pre class="language-matlab">function txt = myupdatefcn(trash,event)
+pos = get(event,'Position');
+dts = get(event.Target,'Tag');
+txt = {dts,...
+       ['X: ',num2str(pos(1))],...
+	   ['Y: ',num2str(pos(2))]};
+</pre>
+	</div>
+</div>
+
+
+
+			<div class="panel panel-default panel_icon_16 comments" id="comments_answer_15920" data-state="closed">
+	<div class="panel-body">
+		<h4><span class="icon-feedback icon_16"></span>&nbsp;&nbsp;<span class="comments-count">1 Comment</span></h4>
+
+
+		<div class="toggle-comments hidden"><span>Show</span><span class="hidden">Hide</span> <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#toggle-comments" class="hidden-comments-count">all comments</a></div>
+
+		<div class="row">
+
+
+	<div class="comment col-xs-12 col-sm-12" id="comment_25795">
+
+			<div class="row reorder_xs">
+
+				<div class="col-xs-12 col-sm-6">
+  <a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris" class="author_inline" data-cp-link-id="6">kris</a>
+<div class="profile mlc_author_popover" data-cp-popup-id="6" vocab="http://schema.org/" typeof="Person">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="profile__name" property="name"><a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris">kris <span>(view profile)</span></a></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="profile__image">
+        <a href="https://fr.mathworks.com/matlabcentral/profile/authors/2950521-kris">
+            <img src="./myupdatefcn_files/profilepic_default.gif">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-8   profile__stats" typeof="CreativeWork">
+      
+  <ul class="contributor-page-popup">
+    <li property="question">
+      <span class="icon-contactus" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=asked_by_id%3A23530"><span property="question_count">1 question asked</span> </a>
+    </li>
+    <li property="answer">
+      <span class="icon-answers" aria-hidden="true"></span>
+      <a href="https://fr.mathworks.com/matlabcentral/answers/?term=answered_by_id%3A23530"><span property="answer_count">0 answers</span> </a>
+    </li>
+    <li property="answers_accepted">
+      <span class="icon-check" aria-hidden="true"></span>
+      <span property="answers_accepted_count">0 accepted answers</span>
+    </li>
+    <li property="answers_reputation">
+      <span class="icon-rating" aria-hidden="true"></span>
+      <span property="answers_accepted_count">reputation: 0</span>
+    </li>
+  </ul>
+
+    </div>
+
+  </div>
+</div> <span class="comment-date">on 15 Jul 2011</span>
+ 	<div class="col-xs-12 visible-xs visible-sm comment_spacer"></div>
+</div>
+
+
+				<div class="col-xs-12 col-sm-6 comment-tools">
+
+
+
+				<div class="flag comment_flag" id="toggle_flag_comment_25795">
+  <a href="https://fr.mathworks.com/matlabcentral/answers/flagged/new?flaggable_id=25795&amp;flaggable_type=Comment" data-toggle="#flag_comment_25795" rel="nofollow"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+
+</div>
+<form accept-charset="UTF-8" action="https://fr.mathworks.com/matlabcentral/answers/flagged" class="flagging-form show-modal-on-error hidden small" data-dialog="true" data-remote="true" id="flag_comment_25795" method="post" title="Flag with care"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="MrcFFYGTwnSOQDXr8VGLu6Y6Gpb4xrMsrdDmEu/Dw6U="></div>
+  <input name="flagging[flaggable_id]" type="hidden" value="25795">
+  <input name="flagging[flaggable_type]" type="hidden" value="Comment">
+
+    <div>
+      <label for="flag_comment_25795_message">Include the reason for your flag below: <span class="tip">Your message will be publicly visible.</span></label>
+      <textarea id="flag_comment_25795_message" name="flagging[message]" data-resize="true" class="form-control"></textarea>
+    </div>
+    <div class="submit">
+      <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot" class="btn btn_primary btn-sm" data-toggle="#flag_comment_25795" rel="nofollow">Cancel</a>
+      <input class="btn btn_secondary btn-sm" data-disable-with="Saving…" type="submit" value="Submit">
+
+    </div>
+</form>
+
+	<a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#comment_25795" class="permalink comment_link" data-toggle="#permalink_comment_25795" id="toggle_permalink_comment_25795" rel="nofollow" title="Direct link to this comment"><span class="icon-link"></span></a>
+	<div data-dialog="compact" class="permalink-dialog hidden" id="permalink_comment_25795">
+		<p><strong>Direct link to this comment:</strong></p>
+		<p class="link-wrapper"><a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#comment_25795" id="anchor_permalink_comment_25795">https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#comment_25795</a></p>
+		 <div class="submit permalink_buttons">
+      <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot" class="btn btn_primary btn-sm" data-toggle="#permalink_comment_25795" rel="nofollow">Cancel</a>
+      <button type="button" class="btn btn_secondary btn-sm copy_permalink" id="copy_permalink_comment_25795">Copy to Clipboard</button>
+  	</div>
+	</div>
+</div>
+
+
+			</div>
+
+			
+
+
+			
+			
+			<div class="row">
+  <div class="col-xs-12">
+    <div id="body_comment_25795" class="panel panel-default add_text_wrapping">
+    	<div class="panel-body">
+    		<p>You are awesome! This was exactly what I was looking for!! Thank you times a million!!</p>
+    	</div>
+    </div>
+
+  </div>
+</div>
+
+
+</div></div>
+
+
+	        <p><a href="https://fr.mathworks.com/mwaccount/profiles/edit?uri=https%3A%2F%2Ffr.mathworks.com%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;t=community">Create a community profile</a> to comment.</p>
+	</div>
+</div>
+
+</div>		</div>
+	</div>
+	<hr>
+</div>
+
+
+
+    <div class="panel-footer">
+        <p><a href="https://fr.mathworks.com/mwaccount/profiles/edit?uri=https%3A%2F%2Ffr.mathworks.com%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;t=community">Create a community profile</a> to answer this question.</p>
+    </div>
+
+
+</div>
+</div>
+
+	<div class="col-xs-12 col-sm-3">
+		<div class="hidden-xs">
+		    <p id="main-heading-1" class="hidden main-heading">Related Content</p>
+			
+<div id="relatedContentMicro" class="relatedContentMicro" itemid="11668" excludeids=""></div>
+
+<div id="relatedContentMacro" class="relatedContentMacro" itemid="11668"></div>
+
+		</div>
+		<div class="random_callout">
+    <div class="panel panel-default panel_color_default panel_color_fill add_margin_20">
+  <div class="panel-body"> <img src="./myupdatefcn_files/discover-makerzone-logo.png" alt="Discover MakerZone" class="add_margin_20">
+    <p>MATLAB and Simulink resources for Arduino, LEGO, and Raspberry Pi</p>
+    <a href="http://makerzone.mathworks.com/?utm_source=Acad&amp;utm_medium=spotlight&amp;utm_campaign=MZ" class="icon-chevron">Learn more </a> </div>
+</div>
+<div class="panel panel-default panel_color_default panel_color_fill add_margin_20">
+  <div class="panel-body">
+    <h3>Discover what MATLAB<sup>®</sup> can do for your career.</h3>
+    <p>Opportunities for recent engineering grads.</p>
+    <a href="https://fr.mathworks.com/company/jobs/opportunities/students/infographic.html?source=7677" class="icon-chevron">Apply Today </a> </div>
+</div><div class="panel panel-default panel_color_default add_margin_20" style="display: block;">
+  <div class="panel-heading" style="background-color: #0a3371; background-image:url(/images/responsive/callouts/matlab-academy.jpg);"> </div>
+  <div class="panel-body panel_color_white panel_color_fill">
+    <h3>MATLAB Academy</h3>
+    <p>New to MATLAB?</p>
+    <a href="http://matlabacademy.mathworks.com/?s_tid=mlc_mlac_ans_sl" class="icon-chevron">Learn MATLAB today! </a> </div>
+</div></div>
+	</div>
+</div>
+
+<div class="modal fade" id="error_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="alert alert-danger error">
+          <span class="alert_icon icon-alert-error icon_32"></span>
+          <h4>An Error Occurred</h4>
+          <p>Unable to complete the action because of changes made to the page. Reload the page to see its updated state.</p>
+        </div>
+      </div>
+      <div class="modal-footer modal_close_footer">
+        <button type="button" class="btn btn_secondary pull-right" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  setTimeout(function() {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "/matlabcentral/answers/C623322ED49BD", true);
+    xmlHttp.send( null );
+  }, 5000);
+</script>
+
+
+
+  
+
+
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+         
+ 
+
+
+<div id="location_content" style="display:none;"></div>
+
+
+<div class="modal fade" id="country-unselected" translate="no">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <object type="image/svg+xml" width="167px" class="mw_logo" alt="MathWorks" data="./myupdatefcn_files/pic-header-mathworks-logo2.svg">
+          <img alt="MathWorks" width="167px" src="./myupdatefcn_files/pic-header-mathworks-logo.png">
+        </object>
+      </div>
+      <div class="modal-body">
+        <div class="row add_margin_40">
+          <div class="col-xs-12">
+            <h1 class="icon-globe icon_color_secondary">Select Your Country</h1>
+            <p>Choose your country to get translated content where available and see local events and offers. Based on your location, we recommend that you select: <strong class="text_location"></strong>.</p>
+            <a href="https://fr.mathworks.com/matlabcentral/answers/11668-displaying-information-about-the-data-set-by-clicking-on-its-plot#" id="domain_select_button" class="btn btn_secondary" data-dismiss="modal"></a>
+          </div>
+        </div>
+        <p>You can also select a location from the following list:</p>
+        <div class="row add_margin_30">
+          <div class="col-sm-4 col-md-3">
+            <h3 class="add_bottom_rule">Americas</h3>
+            <ul class="list-unstyled">
+              <li><a href="https://www.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="canada_select">Canada</a> (English)</li>
+              <li><a href="https://www.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="united_states_select">United States</a> (English)</li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-6">
+            <h3 class="add_bottom_rule">Europe</h3>
+            <div class="row">
+              <div class="col-xs-6 col-sm-12 col-md-6">
+                <ul class="list-unstyled add_margin_0_sm">
+                  <li><a href="https://nl.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="belgium_select">Belgium</a> (English)</li>
+                  <li><a href="https://se.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="denmark_select">Denmark</a> (English)</li>
+                  <li><a href="https://de.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="deutschland_select">Deutschland</a> (Deutsch)</li>
+                  <li><a href="https://es.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="espana_select">España</a> (Español)</li>
+                  <li><a href="https://se.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="finland_select">Finland</a> (English)</li>
+                  <li><a href="https://fr.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="france_select">France</a> (Français)</li>
+                  <li><a href="https://uk.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="ireland_select">Ireland</a> (English)</li>
+                  <li><a href="https://it.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="italia_select">Italia</a> (Italiano)</li>
+                  <li><a href="https://nl.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="luxembourg_select">Luxembourg</a> (English)</li>
+                </ul>
+              </div>
+              <div class="col-xs-6 col-sm-12 col-md-6">
+                <ul class="list-unstyled">
+                  <li><a href="https://nl.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="netherlands_select">Netherlands</a> (English)</li>
+                  <li><a href="https://se.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="norway_select">Norway</a> (English)</li>
+                  <li><a href="https://de.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="osterreich_select">Österreich</a> (Deutsch)</li>
+                  <li><a href="https://www.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="portugal_select">Portugal</a> (English)</li>
+                  <li><a href="https://se.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="sweden_select">Sweden</a> (English)</li>
+                  <li>Switzerland
+                    <ul class="list-unstyled add_indent_20">
+                      <li><a href="https://ch.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" id="swiss_german" class="switzerland_select">Deutsch</a></li>
+                      <li><a href="https://ch.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" id="swiss_english" class="switzerland_select">English</a></li>
+                      <li><a href="https://ch.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" id="swiss_french">Français</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://uk.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="united_kingdom_select">United Kingdom</a> (English)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-3">
+            <h3 class="add_bottom_rule">Asia Pacific</h3>
+            <ul class="list-unstyled">
+              <li><a href="https://au.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="australia_select">Australia</a> (English)</li>
+              <li><a href="https://in.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="india_select">India</a> (English)</li>
+              <li><a href="https://au.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="new_zealand_select">New Zealand</a> (English)</li>
+              <li><a href="https://cn.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="china_select">中国</a> (简体中文)</li>
+              <li><a href="https://jp.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="japan_select">日本</a> (日本語)</li>
+              <li><a href="https://kr.mathworks.com/includes_content/domainRedirect/country_select_alt.html?action=changeCountry&amp;uri=%2Fmatlabcentral%2Fanswers%2F11668-displaying-information-about-the-data-set-by-clicking-on-its-plot&amp;domain=fr.mathworks.com&amp;s_tid=gn_loc_drop" class="korea_select">한국</a> (한국어)</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-center"><strong><a href="https://fr.mathworks.com/company/worldwide.html">See all countries</a></strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+        </div>
+      </div>
+    </div>
+  </div>
+      
+  
+  <!-- MOBILE CTA - Begin -->
+  <div class="cta_container_mobile visible-sm visible-xs">
+    <div class="container-fluid">      
+      <div class="row add_margin_20">
+        <div class="col-xs-12">
+          <div class="cta_box">
+<ul class="list-inline">
+<li class="cta_item cta_item_general"><a href="https://fr.mathworks.com/programs/trials/trial_request.html?eventid=56763&amp;prodcode=ML&amp;s_iid=mlcans_trial_mlc_cta1" class="icon-download">Version d’évaluation</a></li>
+</ul>
+</div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MOBILE CTA - End -->
+
+  <footer id="footer" class="bs-footer"> 
+      <!-- FAT FOOTER - Begin --> 
+        <div class="fat_footer_container">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="grid_192">
+<div class="fat_footer">
+<div class="execmatlabweb"> <!--Requried for Doc Test -->
+<div class="row">
+<div class="col-xs-12 col-md-12 col-lg-9 col-lg-push-3 add_margin_20">
+<div class="row">
+<div class="col-xs-12 col-sm-2">
+<h5>Voir nos produits</h5>
+<ul class="list-unstyled">
+<li><a href="https://fr.mathworks.com/products/matlab.html?s_tid=hp_ff_p_matlab">MATLAB</a></li>
+<li><a href="https://fr.mathworks.com/products/simulink.html?s_tid=hp_ff_p_simulink">Simulink</a></li>
+<li><a href="https://fr.mathworks.com/academia/student_version.html?s_tid=hp_ff_p_student">Version étudiante</a></li>
+<li><a href="https://fr.mathworks.com/hardware-support/home.html?s_tid=hp_ff_p_hwsupport">Prise en charge du matériel</a></li>
+<li><a href="https://fr.mathworks.com/matlabcentral/fileexchange/?s_tid=hp_ff_p_fx">File Exchange</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-2">
+<h5>Essayer ou acheter</h5>
+<ul class="list-unstyled">
+<li><a href="https://fr.mathworks.com/downloads/web_downloads/?s_iid=hp_ff_t_downloads">Téléchargements</a></li>
+<li><a href="https://fr.mathworks.com/programs/trials/trial_request.html?s_iid=hp_ff_p_trial">Version d'évaluation</a></li>
+<li><a href="https://fr.mathworks.com/company/aboutus/contact_us/contact_sales.html?s_iid=hp_ff_t_sales">Contact commercial</a></li>
+<li><a href="https://fr.mathworks.com/pricing-licensing.html?s_iid=hp_ff_t_pricing">Tarifs et licences</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-2">
+<h5>Utiliser nos outils</h5>
+<ul class="list-unstyled">
+<li><a href="https://fr.mathworks.com/help/?s_tid=hp_ff_l_doc">Dernière version de la documentation</a></li>
+<li><a href="https://fr.mathworks.com/support/learn-with-matlab-tutorials.html?s_tid=hp_ff_l_tutorials">Tutoriels</a></li>
+<li><a href="https://fr.mathworks.com/examples/?s_tid=hp_ff_l_examples">Exemples </a></li>
+<li><a href="https://fr.mathworks.com/videos.html?s_tid=hp_ff_l_videos">Vidéos et Webinars</a></li>
+<li><a href="https://fr.mathworks.com/services/training.html?s_tid=hp_ff_l_training">Formations</a></li>
+</ul>
+</div>
+<div class="clearfix" id="offcanvas_clearfix" style="display:none"></div>
+<div class="col-xs-12 col-sm-2">
+<h5>Obtenir de l'aide</h5>
+<ul class="list-unstyled">
+<li><a href="https://fr.mathworks.com/support/install-matlab.html?s_tid=hp_ff_s_install">Aide à l'installation</a></li>
+<li><a href="https://fr.mathworks.com/matlabcentral/answers/?s_tid=hp_ff_s_answers">Réponses </a></li>
+<li><a href="https://fr.mathworks.com/services/consulting.html?s_tid=hp_ff_s_consulting">Services Consulting</a></li>
+<li><a href="http://status.mathworks.com/?s_tid=hp_ff_s_application">Etat des applications</a></li>
+<li><a href="https://fr.mathworks.com/licensecenter/?s_tid=hp_ff_s_license">Centre Licences</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-2">
+<h5>A propos de MathWorks</h5>
+<ul class="list-unstyled">
+<li><a href="https://fr.mathworks.com/company/jobs/opportunities/?s_tid=hp_ff_a_careers">Offres d'emploi</a></li>
+<li><a href="https://fr.mathworks.com/company/newsroom.html?s_tid=hp_ff_a_newsroom">Infos et médias</a></li>
+<li><a href="https://fr.mathworks.com/company/aboutus/soc_mission.html?s_tid=hp_ff_a_socialmission">Activités sociales</a></li>
+<li><a href="https://fr.mathworks.com/company.html?s_tid=hp_ff_a_company">A propos de MathWorks</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-12 col-lg-3 col-lg-pull-9">
+<h4 class="add_font_futura_medium add_margin_0"><span translate="no">MathWorks<span translate="no"></span></span></h4>
+<p><em>Accelerating the pace of engineering and science</em></p>
+<p>MathWorks est le principal éditeur de logiciels de calcul scientifique et technique, pour les ingénieurs et les scientifiques.</p>
+<p><a href="https://fr.mathworks.com/discovery.html?s_tid=all_disc_mw_ff">Découvrez...</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- FAT FOOTER - End -->
+    <!-- BASIC FOOTER CONTENT - Begin --> 
+    <div class="container"> 
+      <div class="footer" translate="no">
+<div class="row">
+<div class="col-xs-12 col-md-9">
+<ul class="countrynav" id="countrynav">
+<li class="footernav_country">
+<a href="javascript:void(0);" data-toggle="modal" data-target="#country-unselected">
+<span class="icon-globe icon_color_quinary icon_16"></span>France
+</a>
+</li>
+</ul>
+<div class="clearfix"></div>
+<ul class="footernav">
+<li class="footernav_patents"><a href="https://fr.mathworks.com/company/aboutus/policies_statements/patents.html?s_tid=gf_pat">Brevets</a></li>
+<li class="footernav_trademarks"><a href="https://fr.mathworks.com/company/aboutus/policies_statements/trademarks.html?s_tid=gf_trd">Marques déposées</a></li>
+<li class="footernav_privacy"><a href="https://fr.mathworks.com/company/aboutus/policies_statements.html?s_tid=gf_priv">Charte de confidentialité</a></li>
+<li class="footernav_piracy"><a href="https://fr.mathworks.com/company/aboutus/policies_statements/piracy.html?s_tid=gf_pir">Preventing Piracy</a></li>
+<li class="footernav_terms"><a href="https://fr.mathworks.com/matlabcentral/termsofuse.html">Terms of Use</a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="clearfix"></div>
+<p class="copyright" translate="no">© 1994-2017 The MathWorks, Inc.</p>
+</div>
+<div class="clearfix visible-sm add_margin_10"></div>
+<div class="col-xs-12 col-md-3">
+<div class="social_media">
+<ul class="social_media_icons">
+<li>
+<a href="http://www.facebook.com/MATLAB" target="_blank" class="svg_link">
+<img src="./myupdatefcn_files/ico-facebook.svg" alt="Facebook" class="ico_facebook">
+</a>
+</li>
+<li>
+<a href="http://www.twitter.com/MATLAB" target="_blank" class="svg_link">
+<img src="./myupdatefcn_files/ico-twitter.svg" alt="Twitter" class="ico_twitter">
+</a>
+</li>
+<li>
+<a href="https://plus.google.com/117177960465154322866?prsrc=3" target="_blank" class="svg_link">
+<img src="./myupdatefcn_files/ico-google-plus.svg" alt="Google+" class="ico_google">
+</a>
+</li>
+<li>
+<a href="http://www.linkedin.com/company/the-mathworks_2" target="_blank" class="svg_link">
+<img src="./myupdatefcn_files/ico-linkedin.svg" alt="LinkedIn" class="ico_linkedin">
+</a>
+</li>
+<li>
+<a href="https://fr.mathworks.com/company/rss.html" class="svg_link">
+<img src="./myupdatefcn_files/ico-rss.svg" alt="RSS" class="ico_rss">
+</a>
+</li>
+</ul>
+<div class="clearfix"></div>
+<p><em>Rejoignez la conversation</em></p>
+</div>
+</div>
+</div>
+</div>
+<!-- BEGIN Adobe DTM -->
+<script type="text/javascript">
+try {
+_satellite.pageBottom();
+} catch (e) {
+//something went wrong
+}
+</script><script>
+if (typeof qcord == 'undefined') {
+  var qcord = '';
+}
+var qcrev = '';
+if (typeof qclabels == 'undefined') {
+  var qclabels = '';
+} 
+ var ezt = ezt ||[];
+
+ (function(){
+   var elem = document.createElement('script');
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://pixel") + ".quantserve.com/aquant.js?a=p-zfNtLVVEHXE-1";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem,scpt);
+ }());
+
+
+ ezt.push({qacct: 'p-zfNtLVVEHXE-1',
+           orderid: qcord,
+           revenue: qcrev,
+           labels: qclabels
+           });
+</script><!-- Google Remarketing Base Tag -->
+<script type="text/javascript">
+/* <![CDATA[ */  
+var google_conversion_id = 1023777138;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./myupdatefcn_files/conversion.js.téléchargement">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./myupdatefcn_files/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe>
+<!-- END Adobe DTM -->
+    </div>
+    <!-- BASIC FAT FOOTER CONTENT - End -->
+  </footer>
+
+    <script src="./myupdatefcn_files/lightbox-min.js.téléchargement"></script> 
+    <script>
+      $(document).ready(function ($) {
+
+        // delegate calls to data-toggle="lightbox"
+        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+            onShown: function() {
+				if ($('.ekko-lightbox-container iframe').length) {
+				  $(".ekko-lightbox-container iframe").attr("scrolling","no");
+				  $(".ekko-lightbox-container iframe").load(lightboxIframeHeight);
+				}
+            },
+            onNavigate: function(direction, itemIndex) {
+              if (window.console) {
+                return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+              }
+            }
+          });
+        });
+		
+		// resize
+		$(window).resize(lightboxIframeHeight)	
+
+		// lightbox height function
+		function lightboxIframeHeight() {
+			if ($('.ekko-lightbox-container iframe').length) {
+				whichIframeHeight = $('.ekko-lightbox-container iframe').contents().find('body').height() + 20;
+				$(".ekko-lightbox-container iframe").css("height",whichIframeHeight);
+			}
+		}
+
+        //Programatically call
+        $('#open-image').click(function (e) {
+          e.preventDefault();
+          $(this).ekkoLightbox();
+        });
+        $('#open-youtube').click(function (e) {
+          e.preventDefault();
+          $(this).ekkoLightbox();
+        });
+      });
+    </script> 
+
+
+
+<a class="btn btn_primary" id="go-top" style="display: inline;"><span class="icon-arrow-open-up icon_24"></span></a></body></html>

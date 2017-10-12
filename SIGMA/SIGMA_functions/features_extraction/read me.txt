@@ -1,0 +1,39 @@
+This file is part of SIGMA toolbox
+
+This directory contain the function associated to the feature extraction for the time series signals. 
+
+The functions are organised as in the name : 
+Features from the Amplitude of the time series:
+
+Function name : 
+
+Amplitude_xx
+	Function related to extract the feature from the amplitude 	of the time series 
+	Where xx is the name of the method
+		Example: Amplitude_mean compute the mean of the 				amplitude of 	the time series signals
+
+Amplitude_enveloppe_xx
+	Function related to extract the feature from the amplitude 	of the enveloppe of the time series signal
+	Where xx is the name of the method
+		Example: Amplitude_enveloppe_std computes the standard 		deviation of the envellopp e of 			the  of 			the time 			series 			signals
+		
+
+Features extraction from the Spectral transformation
+
+Spectral_amplitude_xx
+
+Spectral_amplitude_mean
+
+
+
+
+Features extraction from the Synchronisation
+
+
+Synchro_amplitude_xx
+Synchro_amplitude_corr
+
+
+
+Synchro_phase_index_value
+Synchro_phase_index_xx

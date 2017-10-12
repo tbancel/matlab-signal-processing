@@ -1,0 +1,357 @@
+/* ------------------------------------
+$ Fonts
+------------------------------------ */
+@font-face { font-family: 'mathworks'; font-style: normal; font-weight: normal;
+	src:	url('/includes_content/responsive/fonts/mathworks.woff') format('woff'),
+				url('/includes_content/responsive/fonts/mathworks.ttf') format('truetype'),
+				url('/includes_content/responsive/fonts/mathworks.svg') format('svg');
+}
+
+@font-face { font-family: 'mathworks-eps'; font-style: normal; font-weight: normal;
+	src:	url('/includes_content/responsive/fonts/mathworks-eps.woff') format('woff'),
+				url('/includes_content/responsive/fonts/mathworks-eps.ttf') format('truetype'),
+				url('/includes_content/responsive/fonts/mathworks-eps.svg') format('svg');
+}
+
+
+
+/* ---- Icon Font ---- */
+
+	/* Icon Font: As Background */
+	h1[class*="icon-"]:not(.glyphicon):before,
+	h2[class*="icon-"]:not(.glyphicon):before,
+	h3[class*="icon-"]:not(.glyphicon):before,
+	h4[class*="icon-"]:not(.glyphicon):before,
+	h5[class*="icon-"]:not(.glyphicon):before,
+	h6[class*="icon-"]:not(.glyphicon):before,
+	td[class*="icon-"]:not(.glyphicon):before,
+	p[class*="icon-"]:not(.glyphicon):before,
+	a[class*="icon-"]:not(.glyphicon):before,
+	ul.list-unstyled>li[class*="icon-"]:before { margin-left: -1.65em; display: inline-block; font-family: 'mathworks'; font-size: 106.5%; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1.25; opacity: 0.95; position: absolute; speak: none; text-decoration: none !important; text-transform: none; }
+
+		/* Icon Font: Text Decoration Fix for :before in IE 8-11 */
+		/* http://stackoverflow.com/a/21902566 */
+		a[class*="icon-"]:before { text-decoration: underline; }
+		a[class*="icon-"]:before,
+		a[class*="icon-"]:hover:before { text-decoration: none; }
+
+		/* Icon Font: mathworks-eps Font as Background */
+		h1[class*="icon-mw-"]:before,
+		h2[class*="icon-mw-"]:before,
+		h3[class*="icon-mw-"]:before,
+		h4[class*="icon-mw-"]:before,
+		h5[class*="icon-mw-"]:before,
+		h6[class*="icon-mw-"]:before,
+		td[class*="icon-mw-"]:before,
+		p[class*="icon-mw-"]:before,
+		a[class*="icon-mw-"]:before,
+		ul.list-unstyled>li[class*="icon-mw-"]:before { font-family: 'mathworks-eps' !important; }
+
+	h1[class*="icon-"],
+	h2[class*="icon-"],
+	h3[class*="icon-"],
+	h4[class*="icon-"],
+	h5[class*="icon-"],
+	h6[class*="icon-"],
+	td[class*="icon-"],
+	p[class*="icon-"],
+	a[class*="icon-"],
+	ul.list-unstyled>li[class*="icon-"] { padding-left: 1.80em; }
+
+	a[class*="icon-"] { display: block; }
+
+	/* Icon Font: In-Line -- [ Styles Apply to Form Validation Below ] */
+	button[class*="icon-"],
+	span[class*="icon-"]:not(.glyphicon) { border: 1px solid transparent; display: inline-block; font-family: 'mathworks'; font-style: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; font-variant: normal; font-weight: normal; text-transform: none; speak: none; }
+
+		/* Safari 9+ Only */
+			_::-webkit-:not(:root:root), span[class*="icon-"]:not(.glyphicon) { vertical-align: middle; }
+			/* Icon Font: In-line -- Fix for Safari 8 and 8.0.8 Icon alignment bug - Line 1866*/ ;
+			_::-webkit-full-page-media, _:future, :root span[class*="icon-"]:not(.glyphicon) { vertical-align: middle; }
+
+	.btn > span[class*="icon-"] { border: none; font-size: 100%; line-height: 0; }
+
+		/* In-Line: mathworks-eps Font */
+		span[class*="icon-mw-"],
+		button[class*="icon-mw-"] { font-family: 'mathworks-eps' !important; }
+
+		/* In-Line: Sizes */
+		.icon_16 { font-size: 16px; line-height: 1.00; }
+		.icon_24 { font-size: 24px; line-height: 1.00; }
+		.icon_32 { font-size: 32px; line-height: 1.00; }
+		.icon_48 { font-size: 48px; line-height: 1.00; }
+		.icon_56 { font-size: 56px; line-height: 1.00; }
+		.icon_64 { font-size: 64px; line-height: 1.00; }
+
+	/* Icon Font: Form Validation */
+	.glyphicon.glyphicon-ok,
+	.glyphicon.glyphicon-remove { border: 1px transparent solid; display: inline-block; font-family: 'mathworks'; font-style: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; font-variant: normal; font-weight: normal; text-transform: none; speak: none; }
+
+	/* Icon Font: mathworks Available Icons (Apply any updates to fonts.css as well) */
+	.icon-account:before { content: "\e600" !important; }
+	.icon-activation:before { content: "\e601" !important; }
+	.icon-add:before { content: "\e602" !important; }
+	.icon-add-circle:before { content: "\e603" !important; }
+	.icon-add-circle-reverse:before { content: "\e604" !important; }
+	.icon-addons:before { content: "\e908" !important; }
+	.icon-alert-error:before { content: "\e605" !important; }
+	.icon-alert-info-reverse:before { content: "\e606" !important; }
+	.icon-alert-success:before { content: "\e607" !important; }
+	.icon-alert-warning:before { content: "\e608" !important; }
+	.icon-answers:before { content: "\e609" !important; }
+	.icon-app:before { content: "\e60a" !important; }
+	.icon-arrow-boxed-down:before { content: "\e60b" !important; }
+	.icon-arrow-boxed-left:before { content: "\e60c" !important; }
+	.icon-arrow-boxed-right:before { content: "\e60d" !important; }
+	.icon-arrow-boxed-up:before { content: "\e60e" !important; }
+	.icon-arrow-down:before { content: "\e60f" !important; }
+	.icon-arrow-left:before { content: "\e610" !important; }
+	.icon-arrow-open-down:before { content: "\e611" !important; }
+	.icon-arrow-open-down-reverse:before { content: "\e612" !important; }
+	.icon-arrow-open-left:before { content: "\e613" !important; }
+	.icon-arrow-open-left-reverse:before { content: "\e614" !important; }
+	.icon-arrow-open-right:before { content: "\e615" !important; }
+	.icon-arrow-open-right-reverse:before { content: "\e616" !important; }
+	.icon-arrow-open-up:before { content: "\e617" !important; }
+	.icon-arrow-open-up-reverse:before { content: "\e618" !important; }
+	.icon-arrow-point-left:before { content: "\e900" !important; }
+	.icon-arrow-point-right:before { content: "\e901" !important; }
+	.icon-arrow-right:before { content: "\e619" !important; }
+	.icon-arrow-up:before { content: "\e61a" !important; }
+	.icon-attachment:before { content: "\e61b" !important; }
+	.icon-block:before { content: "\e61c" !important; }
+	.icon-blogs:before { content: "\e61d" !important; }
+	.icon-bug-report:before { content: "\e61e" !important; }
+	.icon-calendar:before { content: "\e61f" !important; }
+	.icon-cc-amex:before { content: "\e686" !important; }
+	.icon-cc-mastercard:before { content: "\e687" !important; }
+	.icon-cc-visa:before { content: "\e688" !important; }
+	.icon-certification:before { content: "\e685" !important; }
+	.icon-chat:before { content: "\e620" !important; }
+	.icon-check:before { content: "\e621" !important; }
+	.icon-checkbox-checked:before { content: "\e903" !important; }
+	.icon-checkbox-unchecked:before { content: "\e902" !important; }
+	.icon-chevron:before { content: "\e622" !important; }
+	.icon-cloud:before { content: "\e623" !important; }
+	.icon-code:before { content: "\e694" !important; }
+	.icon-cody:before { content: "\e67a" !important; }
+	.icon-cog:before { content: "\e66d" !important; }
+	.icon-community:before { content: "\e624" !important; }
+	.icon-contactus:before { content: "\e625" !important; }
+	.icon-corporation:before { content: "\e626" !important; }
+	.icon-data:before { content: "\e627" !important; }
+	.icon-data-view:before { content: "\e67c" !important; }
+	.icon-document:before { content: "\e628" !important; }
+	.icon-documentation:before { content: "\e629" !important; }
+	.icon-download:before { content: "\e62a" !important; }
+	.icon-edit:before { content: "\e62b" !important; }
+	.icon-email:before { content: "\e62c" !important; }
+	.icon-examples:before { content: "\e62e" !important; }
+	.icon-features:before { content: "\e62f" !important; }
+	.icon-feedback:before { content: "\e630" !important; }
+	.icon-file-excel:before { content: "\e674" !important; }
+	.icon-fileexchange:before { content: "\e631" !important; }
+	.icon-file-pdf:before { content: "\e632" !important; }
+	.icon-file-zip:before { content: "\e633" !important; }
+	.icon-filter:before { content: "\e634" !important; }
+	.icon-format-bold:before { content: "\e693" !important; }
+	.icon-format-bullet-list:before { content: "\e692" !important; }
+	.icon-format-code:before { content: "\e691" !important; }
+	.icon-format-header:before { content: "\e690" !important; }
+	.icon-format-image:before { content: "\e68f" !important; }
+	.icon-format-italic:before { content: "\e68e" !important; }
+	.icon-format-monospace:before { content: "\e68d" !important; }
+	.icon-format-number-list:before { content: "\e68b" !important; }
+	.icon-format-underline:before { content: "\e68c" !important; }
+	.icon-function:before { content: "\e635" !important; }
+	.icon-globe:before { content: "\e636" !important; }
+	.icon-guaranteed:before { content: "\e682" !important; }
+	.icon-hardware:before { content: "\e637" !important; }
+	.icon-headset:before { content: "\e683" !important; }
+	.icon-help:before { content: "\e638" !important; }
+	.icon-help-circle:before { content: "\e639" !important; }
+	.icon-history:before { content: "\e671" !important; }
+	.icon-home:before { content: "\e63b" !important; }
+	.icon-homeuse:before { content: "\e63c" !important; }
+	.icon-info:before { content: "\e63d" !important; }
+	.icon-info-circle:before { content: "\e63e" !important; }
+	.icon-installation-help:before { content: "\e63f" !important; }
+	.icon-license-management:before { content: "\e640" !important; }
+	.icon-like:before { content: "\e676" !important; }
+	.icon-link:before { content: "\e641" !important; }
+	.icon-link-external:before { content: "\e681" !important; }
+	.icon-locked:before { content: "\e642" !important; }
+	.icon-membrane:before { content: "\e67f" !important; }
+	.icon-menu:before { content: "\e66f" !important; }
+	.icon-menu-reverse:before { content: "\e670" !important; }
+	.icon-mobile:before { content: "\e643" !important; }
+	.icon-model:before { content: "\e644" !important; }
+	.icon-newsletter-subscribe:before { content: "\e645" !important; }
+	.icon-note:before { content: "\e646" !important; }
+	.icon-payment:before { content: "\e647" !important; }
+	.icon-phone:before { content: "\e648" !important; }
+	.icon-quote:before { content: "\e64a" !important; }
+	.icon-rating:before { content: "\e677" !important; }
+	.icon-refresh:before { content: "\e673" !important; }
+	.icon-releasenotes:before { content: "\e907" !important; }
+	.icon-remove:before { content: "\e64b" !important; }
+	.icon-remove-circle:before { content: "\e64c" !important; }
+	.icon-remove-circle-reverse:before { content: "\e64d" !important; }
+	.icon-rss:before { content: "\e64e" !important; }
+	.icon-rss-enclosed:before { content: "\e64f" !important; }
+	.icon-save:before { content: "\e650" !important; }
+	.icon-script:before { content: "\e651" !important; }
+	.icon-search:before { content: "\e652" !important; }
+	.icon-search-boxed-reverse:before { content: "\e653" !important; }
+	.icon-secure:before { content: "\e680" !important; }
+	.icon-server:before { content: "\e654" !important; }
+	.icon-server-instance:before { content: "\e689" !important; }
+	.icon-server-local:before { content: "\e68a" !important; }
+	.icon-simulink:before { content: "\e67e" !important; }
+	.icon-smartphone:before { content: "\e655" !important; }
+	.icon-sort-ascending:before { content: "\e905" !important; }
+	.icon-sort-descending:before { content: "\e904" !important; }
+	.icon-sort-unsorted:before { content: "\e906" !important; }
+	.icon-spinner:before { content: "\e672" !important; }
+	.icon-startup:before { content: "\e656" !important; }
+	.icon-store:before { content: "\e657" !important; }
+	.icon-student:before { content: "\e658" !important; }
+	.icon-submit:before { content: "\e659" !important; }
+	.icon-support:before { content: "\e675" !important; }
+	.icon-supported:before { content: "\e65a" !important; }
+	.icon-systemobject:before { content: "\e65b" !important; }
+	.icon-system-requirements:before { content: "\e65c" !important; }
+	.icon-techkit:before { content: "\e65d" !important; }
+	.icon-technical-article:before { content: "\e67d" !important; }
+	.icon-training:before { content: "\e65e" !important; }
+	.icon-training-classroom:before { content: "\e695" !important; }
+	.icon-training-facility:before { content: "\e696" !important; }
+	.icon-training-online-live:before { content: "\e698" !important; }
+	.icon-training-online-selfpaced:before { content: "\e697" !important; }
+	.icon-trendy:before { content: "\e67b" !important; }
+	.icon-trial-circle:before { content: "\e62a" !important; }
+	.icon-tutorial:before { content: "\e660" !important; }
+	.icon-university:before { content: "\e661" !important; }
+	.icon-unlocked:before { content: "\e662" !important; }
+	.icon-upload:before { content: "\e684" !important; }
+	.icon-userstory:before { content: "\e663" !important; }
+	.icon-video:before { content: "\e664" !important; }
+	.icon-video-cc:before { content: "\e665" !important; }
+	.icon-video-contract:before { content: "\e666" !important; }
+	.icon-video-expand:before { content: "\e667" !important; }
+	.icon-video-locked:before { content: "\e668" !important; }
+	.icon-video-locked-reverse:before { content: "\e669" !important; }
+	.icon-webinar:before { content: "\e66a" !important; }
+	.icon-zoomin:before { content: "\e66b" !important; }
+	.icon-zoomout:before { content: "\e66c" !important; }
+
+	/* Icon Font: mathworks-eps Available Icons */
+	.icon-mw-application-instance:before { content: "\e600" !important; }
+	.icon-mw-archives:before { content: "\e602" !important; }
+	.icon-mw-badge:before { content: "\e604" !important; }
+	.icon-mw-circle:before { content: "\e605" !important; }
+	.icon-mw-cut:before { content: "\e900" !important; }
+	.icon-mw-copy:before { content: "\e608" !important; }
+	.icon-mw-folder:before { content: "\e628" !important; }
+	.icon-mw-folder-open:before { content: "\e629" !important; }
+	.icon-mw-hot-pick:before { content: "\e60a" !important; }
+	.icon-mw-license:before { content: "\e60b" !important; }
+	.icon-mw-mvp:before { content: "\e904" !important; }	
+	.icon-mw-paste:before { content: "\e901" !important; }
+	.icon-mw-questions:before { content: "\e627" !important; }
+	.icon-mw-rename:before { content: "\e902" !important; }
+	.icon-mw-report:before { content: "\e60d" !important; }
+	.icon-mw-restart:before { content: "\e60e" !important; }
+	.icon-mw-risingstar:before { content: "\e905" !important; }	
+	.icon-mw-run:before { content: "\e60f" !important; }
+	.icon-mw-running:before { content: "\e610" !important; }
+	.icon-mw-staff:before { content: "\e903" !important; }	
+	.icon-mw-stop:before { content: "\e623" !important; }
+	.icon-mw-trash:before { content: "\e624" !important; }
+	.icon-mw-watch:before { content: "\e626" !important; }
+
+	/* Icon Font: Form Validation */
+	.glyphicon.glyphicon-remove:before { content: "\e605" !important; }
+	.glyphicon.glyphicon-ok:before { content: "\e607" !important; }
+
+	/* Icon Font: Colors */
+	.icon-alert-error.icon_alert_color {  color: #a94442; }
+	.icon-alert-info-reverse.icon_alert_color { color: #31708f; }
+	.icon-alert-success.icon_alert_color { color: #3c763d; }
+	.icon-alert-warning.icon_alert_color { color: #8a6d3b; }
+
+	/* Icon Font: Deprecated */
+
+		/* Icon Font: Deprecated - MathWorks */
+
+			/* icon-cog-reverse -> icon-cog */
+			.icon-cog-reverse:before { content: "\e66d" !important; }
+
+			/* icon-contactus-menu -> icon-contactus */
+			.icon-contactus-menu:before { content: "\e625" !important; }
+
+			/* icon-contactus-menu-reverse -> icon-contactus */
+			.icon-contactus-menu-reverse:before { content: "\e625" !important; }
+
+			/* icon-email-circle -> icon-email */
+			.icon-email-circle:before { content: "\e62c" !important; }
+
+			/* icon-help-reverse -> icon-help-circle */
+			.icon-help-reverse:before { content: "\e639" !important; }
+
+			/* icon-phone-circle -> icon-phone */
+			.icon-phone-circle:before { content: "\e648" !important; }
+
+			/* icon-subscribe -> icon-newsletter-subscribe */
+			.icon-subscribe:before { content: "\e645" !important; }
+
+
+		/* Icon Font: Deprecated - MathWorks EPS */
+			/* icon-mw-comment -> icon-feedback */
+			.icon-mw-comment:before { font-family: 'mathworks' !important; content: "\e630" !important; }
+
+			/* icon-mw-help -> icon-help-circle */
+			.icon-mw-help:before { font-family: 'mathworks' !important; content: "\e639" !important; }
+
+			/* icon-mw-server -> icon-server */
+			.icon-mw-server:before { font-family: 'mathworks' !important; content: "\e654" !important; }
+
+			/* icon-mw-server-instance -> icon-server-instance */
+			.icon-mw-server-instance:before { font-family: 'mathworks' !important; content: "\e689" !important; }
+
+			/* icon-mw-server-local -> icon-server-local */
+			.icon-mw-server-local:before { font-family: 'mathworks' !important; content: "\e68a" !important; }
+
+			/* icon-mw-trendy-plot -> icon-trendy */
+			.icon-mw-trendy-plot:before { font-family: 'mathworks' !important; content: "\e67b" !important; }
+
+
+	span.icon_color_null,
+	.icon_color_null:before { color: #fff; }
+
+	span.icon_color_general,
+	.icon_color_general:before { color: #6f6f6f; }
+
+	span.icon_color_primary,
+	.icon_color_primary:before { color: #333; }
+
+	span.icon_color_secondary,
+	.icon_color_secondary:before { color: #004b87; }
+
+	span.icon_color_tertiary,
+	.icon_color_tertiary:before { color: #48a23f; }
+
+	span.icon_color_quaternary,
+	.icon_color_quaternary:before { color: #f2a900; }
+
+	span.icon_color_quinary,
+	.icon_color_quinary:before { color: #00a9e0; }
+
+	span.icon_color_senary,
+	.icon_color_senary:before { color: #b7312c; }
+
+	span.icon_color_septenary,
+	.icon_color_septenary:before { color: #d78825; }
+
+	span.icon_color_emphasize,
+	.icon_color_emphasize:before { color: #cb6015; }

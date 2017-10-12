@@ -1,0 +1,3 @@
+Salut Aurélien, 
+
+HERMES est une toolbox pour le calculs des connectivity, essaie de la lancer pour voir son aspect, et comment elle est fairte, y'a même une démo que tu pourras lancer et voir l'affichage des résultas...

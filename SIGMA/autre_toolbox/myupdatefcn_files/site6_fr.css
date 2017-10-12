@@ -1,0 +1,73 @@
+/* Localized Style Sheet: FR */
+
+/*
+-----------------------------------
+TOC
+-----------------------------------
+
+Fonts:....................Available font-family declarations
+
+Bootstrap Overrides:......Changes to base-Bootstrap CSS
+
+Page Globals:.............Styling of HTML and BODY
+
+Site Elements:............Re-usable site elements   
+
+Structure:................Site structural components
+
+Section Specific:.........Styles for Home and all Sub Pages
+
+Page/Element Specific:....Page, element or flow Specific CSS
+
+Override CSS:.............Additive/override CSS
+
+Responsive:...............Specific styles for Desktop, Tablet and Mobile
+*/
+
+
+
+/*-----------------------------------
+   Page/Element Specific
+-----------------------------------*/
+/* ---- Responsive Offcanvas: Translations for Offcanvas Actuator ---- */
+
+  /* Offcanvas Actuator: Close */
+  .offcanvas_actuator .offcanvas_actuator_close:before { content: "Fermer" !important; }
+
+  /* Offcanvas Actuator: Filter */
+  .offcanvas_actuator #translation_icon-filter:before { content: "Filtrer" !important; }
+
+
+
+/*-----------------------------------
+   Responsive
+-----------------------------------*/
+
+/* ---- Non-Mobile ---- */
+@media only screen and (min-width: 768px) {
+
+}
+
+
+/* ---- Desktop Large ---- */
+@media only screen and (min-width: 1200px) {
+
+}
+
+
+/* ---- Desktop Small ---- */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+
+/* ---- Tablet ---- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+
+/* ---- Mobile ---- */
+@media only screen and (max-width: 767px) {
+  
+}

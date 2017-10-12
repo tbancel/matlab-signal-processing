@@ -1,0 +1,98 @@
+
+sigma_comment =
+
+You should modify the parameters in this script "Sgma_parameter_initialisation" 
+
+=======================   Informations : Initialisations    ==================
+ 0- Your data are located at the following path : SIGMA_data\
+ 1- You have selected the 2 folowing subjects : 1  2
+ 2- You have selected the 2 folowing bands : 1  2
+ 3- You have selected 0 for the low pass filter
+ 4- You have selected 0 for the notch filter
+ 5- You have selected 0 for the wavelet transform (reserved for the methods 25 to 35) )
+ 6- You have selected the 4 folowing methods : 4  5  6  7
+ 7- You have selected the 1  1  1  1 for applying filters for the methods : 4  5  6  7
+ 8- You have selected  50 feature(s) to rank with the OFR
+ 9- You have selected  the LDA for the classification method
+======> Next Step : If you keep the default value You should run this "init_parameter=sigma_frequency_initialisation(init_parameter)" 
+apply filter
+     1     1     1     1
+
+
+sigma_comment =
+
+Extract the Sampling rate from the data...
+
+<a href="matlab: opentoline('/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/SIGMA_option/Sigma_get_sampling_rate.m',8,1)">8   </a>        cd([init_parameter.data_location])
+([init_parameter.data_location])
+
+ans =
+
+SIGMA_data\
+
+init_parameter.data_location
+
+ans =
+
+SIGMA_data\
+
+init_parameter.data_location='SIGMA_data/'
+
+init_parameter = 
+
+               sigma_directory: '/private/tmp/tmedani.PR5ILf/Downloads/SIGMA'
+                   data_output: 'SIGMA_output\'
+                  session_name: 'Session_12-Oct-2017_111213'
+                   logFilename: 'Sigma_logFile_Session_12-Oct-2017_111213.txt'
+                 diaryFilename: 'Sigma_diaryFile_Session_12-Oct-2017_111213.txt'
+             full_session_name: 'SIGMA_output\/Session_12-Oct-2017_111213'
+            sigma_show_comment: 1
+           sigma_write_logFile: 0
+         sigma_write_diaryFile: 1
+                 data_location: 'SIGMA_data/'
+      validation_data_location: 'SIGMA_data\'
+     application_data_location: 'SIGMA_data\'
+                   random_data: 0
+            sigma_display_data: 1
+              epoch_to_display: 1
+            subject_to_display: 1
+        subject_for_validation: [6 8]
+                       subject: [1 2]
+                    nb_subject: 2
+                 selected_band: [1 2]
+                      nb_bands: 2
+               low_pass_filter: 0
+              high_pass_filter: 0
+              band_pass_filter: 0
+                  notch_filter: 0
+             wavelet_transform: 0
+                        method: [4 5 6 7]
+                     nb_method: 4
+                  apply_filter: [1 1 1 1]
+         sampling_rate_default: 0
+                 resample_data: 0
+                   nb_features: 50
+                 feature_index: [1 2]
+               threshold_probe: 0.8000
+                ranking_method: 'gram_schmidt'
+       cross_validation_method: 'LHSO'
+         classification_method: 'LDA'
+    remove_individual_features: 'N'
+                    freq_bands: [8x2 double]
+                    bands_list: {8x1 cell}
+           selected_freq_bands: [2x2 double]
+             band_filter_order: 5
+            selected_freq_list: {2x1 cell}
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+sigma_tp_initialisation
+SIGMA>> Installation in progress ... 
+SIGMA>> You are running SIGMA under MAC machine ...
+[Warning: SIGMA>> SIGMA is already installed on your computer!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Sigma_install', '/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/Sigma_install.m', 32)" style="font-weight:bold">Sigma_install</a> (<a href="matlab: opentoline('/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/Sigma_install.m',32,0)">line 32</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sigma_tp_initialisation', '/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/BME_TP1/sigma_tp_initialisation.m', 5)" style="font-weight:bold">sigma_tp_initialisation</a> (<a href="matlab: opentoline('/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/BME_TP1/sigma_tp_initialisation.m',5,0)">line 5</a>)] 
+[Warning: Directory already exists.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Sigma_parameter_initialisation', '/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/Sigma_main/Sigma_parameter_initialisation.m', 91)" style="font-weight:bold">Sigma_parameter_initialisation</a> (<a href="matlab: opentoline('/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/Sigma_main/Sigma_parameter_initialisation.m',91,0)">line 91</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sigma_tp_initialisation', '/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/BME_TP1/sigma_tp_initialisation.m', 8)" style="font-weight:bold">sigma_tp_initialisation</a> (<a href="matlab: opentoline('/private/tmp/tmedani.PR5ILf/Downloads/SIGMA/BME_TP1/sigma_tp_initialisation.m',8,0)">line 8</a>)] 
