@@ -49,21 +49,22 @@ The used methods for features are:
 ```
 
 
-To understand how the time_mean is calculated, the file is located in `SIGMA_functions > features_extraction > Time_mean.m`, in this case, it is simply the mean of the signal over all the epoch. The result is store in the variable `features_results.o_time_mean` which we can access later by clicking on "See & Export Workspace". o_time_mean is indeed a 64x24 matrix (actually inverted from what is shown on the slides) because there are in total 24 epochs (subject 1 has 14 epochs, subject 2 has 1 and subject has 9, 14+9+1=24) and 64 lines because there are 16 channels and 4 bands, there 16x4=64 calculations of the time_mean. By reading the code, we understand that the first 4 lines are actually the calculation of the time mean for the channel 1 over the 4 bands (again different from how it is presented in the slides :@ !!).
+To understand how the time_mean is calculated, the file is located in `SIGMA_functions > features_extraction > Time_mean.m`, in this case, it is simply the mean of the signal over all the epoch. The result is store in the variable `features_results.o_time_mean` which we can access later by clicking on `"See & Export Workspace". o_time_mean is indeed a 64x24 matrix (actually inverted from what is shown on the slides) because there are in total 24 epochs (subject 1 has 14 epochs, subject 2 has 1 and subject has 9, 14+9+1=24) and 64 lines because there are 16 channels and 4 bands (therefore 16x4=64 calculations of the time_mean). By reading the code, we understand that the first 4 lines are actually the calculation of the time mean for the channel 1 over the 4 bands (again different from how it is presented in the slides :@ !!).
 
 In the variable `features_results.o_features_matrix_normalized`, the number of rows is 64x3=192 (64 calculations per feature and 3 features) and still 24 columns (because 24 epochs).
 
 
 ## Best feature selection
 
-We then extract among the 192 features the best ones, either by ranking them (the ones that are most separating the labels) or using the OFR technique (which basically generates a bunch of noisy features and rank the noisy features and the computed features to the noisy features and select the XX first computed features so that the total amount of noisy features ranked better do not exceed XX % of the total of computed features).
+We then extract among the 192 features the best ones, either by ranking them (the ones that are most separating the labels) or using the OFR technique (which basically generates a bunch of noisy features and rank the noisy features and the computed features, and select the XX first computed features so that the total amount of noisy features ranked better do not exceed XX % of the total of the computed features).
 
-The OFR ranking with 10% risk gives us 5 best features (cf in the figures), the first one is the mean of the band 2 (Theta band) on channel 6. We can see on the scatter plot (on the first 3 best features), after a rotation, that we can pretty well seperate the 2 classes (dizzy / concentrated), which means that our features may be able to predict well.
+The OFR ranking with 10% risk gives us 5 best features (cf Figure 1), the first one is the mean of the band 2 (Theta band) on channel 6. We can see on Figure 2, that after rotating the scatter plot (on the first 3 best features) we can well seperate the 2 classes (dizzy / concentrated), which means that our features may be able to predict well.
 
 ## Classification
 
-Unfortunately, when running "Compute classification", the feature reduction induces errors (cf. figure 5 in the figure folders).
-The error message is the following
+Unfortunately, when running `"Compute classification", the feature reduction induces errors (cf. figure 4). This is a HARD BLOCKER for the rest of the assignment.
+
+The error message is the following:
 
 ```matlab
 You are runing the LOEO method for training your model ... 
