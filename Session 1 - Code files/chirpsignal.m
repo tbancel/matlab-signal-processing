@@ -5,7 +5,7 @@ clc;
 
 fs=200; % we sample at 200Hz
 
-% Signal
+% Signal (assumed continuous)
 t_c=0:1/5000:1
 y=chirp(t_c,0,1,fs/6);
 

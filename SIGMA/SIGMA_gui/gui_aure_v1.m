@@ -247,7 +247,13 @@ FilePath = uigetdir();
 if( FilePath == 0 )
     disp('No path')
 else
+    if ispc
     handles.init_parameter.data_location = [ FilePath, '\' ];
+    end
+    if ismac
+    handles.init_parameter.data_location = [ FilePath, '/' ];
+    end
+    
     % Load subject data and update all
     handles = DL_load_subjects(handles, hObject);
     %Set button availability
